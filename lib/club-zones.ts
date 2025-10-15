@@ -5,12 +5,15 @@ import {
   degreesToRadians,
   haversineDistance,
   pointInPolygon,
+  type LatLngLiteral,
   type MapBounds
 } from "./geo";
 import type { PlaceFeature } from "@/types/places";
 import type { SafeZone } from "@/types/safe-zone";
 
 export const CLUB_SAFE_DISTANCE_METERS = 500;
+const CLUSTER_MAX_DISTANCE_METERS = 2500;
+const CLUSTER_BUFFER_METERS = 800;
 
 export function computeSafeZones(bounds: MapBounds, restrictedPlaces: PlaceFeature[]) {
   if (restrictedPlaces.length === 0) {
@@ -51,19 +54,7 @@ export function computeSafeZones(bounds: MapBounds, restrictedPlaces: PlaceFeatu
     west: restrictedBounds.west - lngMarginDegrees
   };
 
-  const hullPoints =
-    restrictedPlaces.length >= 3
-      ? concaveman(
-          restrictedPlaces.map((place) => [place.location.lng, place.location.lat]),
-          1.5,
-          10
-        )
-      : null;
-
-  const landPolygon =
-    hullPoints && hullPoints.length >= 3
-      ? hullPoints.map(([lng, lat]) => ({ lat, lng }))
-      : null;
+  const landPolygons = buildLandPolygons(restrictedPlaces);
 
   const grid = createHexagonGrid(bounds, 9);
   const zones: SafeZone[] = [];
@@ -81,14 +72,21 @@ export function computeSafeZones(bounds: MapBounds, restrictedPlaces: PlaceFeatu
       continue;
     }
 
-    if (landPolygon) {
-      const centerInside = pointInPolygon(center, landPolygon);
-      const vertexInside = polygon.some((vertex) => pointInPolygon(vertex, landPolygon));
-      const hullVertexInside = landPolygon.some((vertex) => pointInPolygon(vertex, polygon));
+    const intersectsLand =
+      landPolygons.length === 0
+        ? true
+        : landPolygons.some((landPolygon) => {
+            if (pointInPolygon(center, landPolygon)) {
+              return true;
+            }
+            if (polygon.some((vertex) => pointInPolygon(vertex, landPolygon))) {
+              return true;
+            }
+            return landPolygon.some((vertex) => pointInPolygon(vertex, polygon));
+          });
 
-      if (!centerInside && !vertexInside && !hullVertexInside) {
-        continue;
-      }
+    if (!intersectsLand) {
+      continue;
     }
 
     const minDistanceMeters = restrictedPlaces.reduce((distance, place) => {
@@ -108,4 +106,75 @@ export function computeSafeZones(bounds: MapBounds, restrictedPlaces: PlaceFeatu
   }
 
   return zones;
+}
+
+function buildLandPolygons(restrictedPlaces: PlaceFeature[]) {
+  const polygons: LatLngLiteral[][] = [];
+  if (restrictedPlaces.length === 0) {
+    return polygons;
+  }
+
+  const visited = new Array(restrictedPlaces.length).fill(false);
+
+  for (let i = 0; i < restrictedPlaces.length; i += 1) {
+    if (visited[i]) continue;
+    const clusterIndices: number[] = [];
+    const queue: number[] = [i];
+    visited[i] = true;
+
+    while (queue.length > 0) {
+      const current = queue.pop() as number;
+      clusterIndices.push(current);
+      const currentLocation = restrictedPlaces[current].location;
+
+      for (let j = 0; j < restrictedPlaces.length; j += 1) {
+        if (visited[j]) continue;
+        const distanceMeters =
+          haversineDistance(currentLocation, restrictedPlaces[j].location) * 1000;
+        if (distanceMeters <= CLUSTER_MAX_DISTANCE_METERS) {
+          visited[j] = true;
+          queue.push(j);
+        }
+      }
+    }
+
+    const clusterPoints = clusterIndices.map((index) => restrictedPlaces[index].location);
+
+    if (clusterPoints.length >= 3) {
+      const hull = concaveman(
+        clusterPoints.map((point) => [point.lng, point.lat]),
+        1.1,
+        24
+      );
+      if (hull.length >= 3) {
+        polygons.push(hull.map(([lng, lat]) => ({ lat, lng })));
+        continue;
+      }
+    }
+
+    const fallbackPolygon = createBufferedBoundingPolygon(clusterPoints, CLUSTER_BUFFER_METERS);
+    polygons.push(fallbackPolygon);
+  }
+
+  return polygons;
+}
+
+function createBufferedBoundingPolygon(points: LatLngLiteral[], bufferMeters: number) {
+  const minLat = Math.min(...points.map((point) => point.lat));
+  const maxLat = Math.max(...points.map((point) => point.lat));
+  const minLng = Math.min(...points.map((point) => point.lng));
+  const maxLng = Math.max(...points.map((point) => point.lng));
+  const referenceLat =
+    points.reduce((sum, point) => sum + point.lat, 0) / Math.max(points.length, 1);
+  const latBufferDegrees = bufferMeters / 111320;
+  const lngBufferDegrees =
+    bufferMeters /
+    (111320 * Math.max(Math.cos(degreesToRadians(referenceLat)), 1e-6));
+
+  return [
+    { lat: minLat - latBufferDegrees, lng: minLng - lngBufferDegrees },
+    { lat: minLat - latBufferDegrees, lng: maxLng + lngBufferDegrees },
+    { lat: maxLat + latBufferDegrees, lng: maxLng + lngBufferDegrees },
+    { lat: maxLat + latBufferDegrees, lng: minLng - lngBufferDegrees }
+  ];
 }

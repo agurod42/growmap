@@ -7,15 +7,7 @@ import {
   PolygonF,
   useLoadScript
 } from "@react-google-maps/api";
-import {
-  Badge,
-  Button,
-  Card,
-  CardBody,
-  CardHeader,
-  Divider,
-  Spinner
-} from "@heroui/react";
+import { Badge, Card, CardBody, CardHeader, Divider, Spinner } from "@heroui/react";
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import useSWR from "swr";
 
@@ -477,12 +469,6 @@ export default function GrowMap({ filters }: GrowMapProps) {
     }
   }, [highlightedZone, safeZones]);
 
-  const handleRecenter = () => {
-    if (!mapRef.current) return;
-    mapRef.current.panTo(DEFAULT_CENTER);
-    mapRef.current.setZoom(radiusToZoom(filters.searchRadius));
-  };
-
   if (!googleMapsApiKey) {
     return (
       <div className="flex h-full flex-col items-center justify-center gap-4 p-8 text-center">
@@ -624,12 +610,6 @@ export default function GrowMap({ filters }: GrowMapProps) {
             </CardHeader>
           </Card>
         )}
-      </div>
-
-      <div className="pointer-events-auto absolute top-6 right-6 z-20 flex flex-col items-end gap-3">
-        <Button color="success" variant="flat" onPress={handleRecenter} size="sm">
-          Reset view
-        </Button>
       </div>
 
       {(cannabisLoading || safeZoneLoading) && (
