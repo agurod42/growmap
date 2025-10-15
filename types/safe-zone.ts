@@ -1,9 +1,10 @@
 import type { LatLngLiteral } from "@/lib/geo";
 
 export type SafeZone = {
-  cellId: string;
+  id: string;
   center: LatLngLiteral;
-  polygon: LatLngLiteral[];
+  paths: LatLngLiteral[][];
+  areaSquareMeters: number;
   minDistanceMeters: number;
 };
 

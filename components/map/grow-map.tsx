@@ -174,7 +174,7 @@ const SafeZonePolygon = memo(function SafeZonePolygon({
 }) {
   return (
     <PolygonF
-      paths={zone.polygon}
+      paths={zone.paths}
       options={{
         fillColor: "#22c55e",
         fillOpacity: isHighlighted ? 0.3 : 0.18,
@@ -463,7 +463,7 @@ export default function GrowMap({ filters }: GrowMapProps) {
 
   useEffect(() => {
     if (!highlightedZone) return;
-    const stillPresent = safeZones.some((zone) => zone.cellId === highlightedZone.cellId);
+    const stillPresent = safeZones.some((zone) => zone.id === highlightedZone.id);
     if (!stillPresent) {
       setHighlightedZone(undefined);
     }
@@ -520,9 +520,9 @@ export default function GrowMap({ filters }: GrowMapProps) {
         {filters.showClubEnabledAreas &&
           safeZones.map((zone) => (
             <SafeZonePolygon
-              key={zone.cellId}
+              key={zone.id}
               zone={zone}
-              isHighlighted={highlightedZone?.cellId === zone.cellId}
+              isHighlighted={highlightedZone?.id === zone.id}
               onHover={setHighlightedZone}
             />
           ))}
@@ -605,7 +605,9 @@ export default function GrowMap({ filters }: GrowMapProps) {
             <CardHeader className="flex flex-col items-start gap-1">
               <p className="text-tiny uppercase text-foreground-500">Club-enabled area</p>
               <p className="text-small font-medium text-success">
-                {highlightedZone.minDistanceMeters.toFixed(0)} m away from nearest sensitive point
+                {Number.isFinite(highlightedZone.minDistanceMeters)
+                  ? `${highlightedZone.minDistanceMeters.toFixed(0)} m away from nearest sensitive point`
+                  : "No sensitive places within the configured radius"}
               </p>
             </CardHeader>
           </Card>
