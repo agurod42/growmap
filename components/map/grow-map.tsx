@@ -453,7 +453,7 @@ export default function GrowMap({ filters }: GrowMapProps) {
               </Badge>
             )}
             {filters.showClubEnabledAreas && (
-              <Badge color="success" variant="bordered">
+              <Badge color="success" variant="flat">
                 Club-enabled zones
               </Badge>
             )}
