@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
 import { heroui } from "@heroui/react";
 
+const heroUiPlugin = heroui() as unknown as NonNullable<Config["plugins"]>[number];
+
 const config: Config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -17,7 +19,7 @@ const config: Config = {
     }
   },
   darkMode: "class",
-  plugins: [heroui()]
+  plugins: [heroUiPlugin]
 };
 
 export default config;
