@@ -613,14 +613,9 @@ export default function GrowMap({ filters }: GrowMapProps) {
             )}
           </CardBody>
         </Card>
-      </div>
 
-      <div className="pointer-events-auto absolute top-6 right-6 z-20 flex flex-col items-end gap-3">
-        <Button color="success" variant="flat" onPress={handleRecenter} size="sm">
-          Reset view
-        </Button>
         {highlightedZone && (
-          <Card className="max-w-xs bg-content1/90 backdrop-blur">
+          <Card className="pointer-events-auto max-w-xs bg-content1/90 backdrop-blur">
             <CardHeader className="flex flex-col items-start gap-1">
               <p className="text-tiny uppercase text-foreground-500">Club-enabled area</p>
               <p className="text-small font-medium text-success">
@@ -629,6 +624,12 @@ export default function GrowMap({ filters }: GrowMapProps) {
             </CardHeader>
           </Card>
         )}
+      </div>
+
+      <div className="pointer-events-auto absolute top-6 right-6 z-20 flex flex-col items-end gap-3">
+        <Button color="success" variant="flat" onPress={handleRecenter} size="sm">
+          Reset view
+        </Button>
       </div>
 
       {(cannabisLoading || safeZoneLoading) && (
