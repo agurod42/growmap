@@ -1,4 +1,5 @@
 import type { LatLngLiteral } from "@/lib/geo";
+import type { RestrictedCategory } from "./map";
 
 export type SafeZone = {
   id: string;
@@ -6,6 +7,16 @@ export type SafeZone = {
   paths: LatLngLiteral[][];
   areaSquareMeters: number;
   minDistanceMeters: number;
+};
+
+export type SafeZoneCacheEntry = {
+  key: string;
+  categories: RestrictedCategory[];
+  zones: SafeZone[];
+  meta: {
+    bufferDistanceMeters: number;
+    restrictedPlaceCount: number;
+  };
 };
 
 export type SafeZoneResponse = {
@@ -21,6 +32,9 @@ export type SafeZoneResponse = {
       hit?: boolean;
       ttlMs?: number;
       updatedAt?: string;
+      safeZoneKey?: string;
+      safeZoneRestrictedPlaceCount?: number;
+      safeZoneCacheHit?: boolean;
     };
   };
 };

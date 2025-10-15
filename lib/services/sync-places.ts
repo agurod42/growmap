@@ -1,6 +1,8 @@
 import { cannabisCategoryList, restrictedCategoryList } from "@/lib/constants/categories";
+import { defaultCityId } from "@/lib/config/cities";
 import { referenceCity } from "@/lib/config/reference-city";
 import { fetchCannabisPlaces, fetchRestrictedPlaces } from "@/lib/google-places";
+import { buildSafeZoneCache } from "@/lib/services/safe-zone-cache";
 import { writeCachedPlaces } from "@/lib/storage/place-cache";
 
 export async function syncReferenceCityPlaces() {
@@ -24,11 +26,13 @@ export async function syncReferenceCityPlaces() {
   ]);
 
   const updatedAt = new Date().toISOString();
+  const safeZoneCache = buildSafeZoneCache(defaultCityId, restrictedResponse.features);
 
   await writeCachedPlaces({
     updatedAt,
     cannabis: cannabisResponse.features,
     restricted: restrictedResponse.features,
+    safeZoneCache,
     meta: {
       bounds,
       radiusMeters,
@@ -42,6 +46,7 @@ export async function syncReferenceCityPlaces() {
     cannabisCount: cannabisResponse.features.length,
     restrictedCount: restrictedResponse.features.length,
     cannabisSource: cannabisResponse.source,
-    restrictedSource: restrictedResponse.source
+    restrictedSource: restrictedResponse.source,
+    safeZoneVariants: safeZoneCache.length
   };
 }

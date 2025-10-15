@@ -3,6 +3,7 @@ import path from "path";
 
 import type { MapBounds } from "@/lib/geo";
 import type { PlaceFeature } from "@/types/places";
+import type { SafeZoneCacheEntry } from "@/types/safe-zone";
 
 const DEFAULT_CACHE_DIR =
   process.env.PLACE_CACHE_DIR ?? path.join(process.cwd(), "data", "cache");
@@ -13,6 +14,7 @@ export type CachedPlaceDataset = {
   updatedAt: string;
   cannabis: PlaceFeature[];
   restricted: PlaceFeature[];
+  safeZoneCache?: SafeZoneCacheEntry[];
   meta: {
     bounds: MapBounds;
     radiusMeters: number;

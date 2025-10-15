@@ -8,10 +8,12 @@ import {
   MissingPlaceDatasetError,
   queryRestrictedPlaces
 } from "@/lib/services/place-repository";
+import { safeZoneCacheKey } from "@/lib/services/safe-zone-cache";
 import { defaultCityId, getCityClubSafeDistance, getCityRestrictedCategories } from "@/lib/config/cities";
 import { isPointInsideCity } from "@/lib/land";
 import type { RestrictedCategory } from "@/types/map";
 import { supportedCityIdsEnum } from "@/types/map";
+import type { SafeZone } from "@/types/safe-zone";
 
 export const runtime = "nodejs";
 
@@ -63,6 +65,7 @@ export async function GET(req: Request) {
   const requested = (categories ?? cityRestrictedCategories).filter((category) =>
     allowed.has(category)
   ) as RestrictedCategory[];
+  const cacheKey = safeZoneCacheKey(requested);
 
   const useCityScope = scope === "city";
   const cache = await readCachedPlaces();
@@ -80,14 +83,10 @@ export async function GET(req: Request) {
   let searchRadius = Math.max(radius, viewportRadius, 500);
   let restrictedFeatures = [];
   let source: "google" | "cache" = "cache";
-  let cacheMeta:
-    | {
-        updatedAt?: string;
-      }
-    | Record<string, unknown>
-    | undefined;
+  let cacheMeta: Record<string, unknown> | undefined;
+  let cachedSafeZones: SafeZone[] | undefined;
 
-  if ((useCityScope || cache) && cache) {
+  if (cache) {
     restrictedFeatures = cache.restricted.filter((feature) => {
       if (!feature.restrictedCategory) return true;
       return requested.includes(feature.restrictedCategory);
@@ -95,6 +94,22 @@ export async function GET(req: Request) {
     source = "cache";
     searchRadius = cache.meta.radiusMeters;
     cacheMeta = { updatedAt: cache.updatedAt };
+    const matchedEntry = cache.safeZoneCache?.find((entry) => entry.key === cacheKey);
+    if (matchedEntry) {
+      cachedSafeZones = matchedEntry.zones;
+      cacheMeta = {
+        ...cacheMeta,
+        safeZoneKey: matchedEntry.key,
+        safeZoneRestrictedPlaceCount: matchedEntry.meta.restrictedPlaceCount,
+        safeZoneCacheHit: true
+      };
+    } else {
+      cacheMeta = {
+        ...cacheMeta,
+        safeZoneKey: cacheKey,
+        safeZoneCacheHit: false
+      };
+    }
   } else {
     try {
       const restrictedPlacesResponse = await queryRestrictedPlaces({
@@ -118,10 +133,13 @@ export async function GET(req: Request) {
     isPointInsideCity(cityId, feature.location)
   );
 
-  const zones = computeSafeZones(restrictedFeatures, {
-    cityId,
-    bufferDistanceMeters: getCityClubSafeDistance(cityId)
-  });
+  const bufferDistanceMeters = getCityClubSafeDistance(cityId);
+  const zones =
+    cachedSafeZones ??
+    computeSafeZones(restrictedFeatures, {
+      cityId,
+      bufferDistanceMeters
+    });
 
   return NextResponse.json({
     zones,
