@@ -10,8 +10,8 @@ import {
 } from "@/lib/services/place-repository";
 import { defaultCityId, getCityClubSafeDistance, getCityRestrictedCategories } from "@/lib/config/cities";
 import { isPointInsideCity } from "@/lib/land";
-import type { CityId, RestrictedCategory } from "@/types/map";
-import { supportedCityIds } from "@/types/map";
+import type { RestrictedCategory } from "@/types/map";
+import { supportedCityIdsEnum } from "@/types/map";
 
 export const runtime = "nodejs";
 
@@ -27,9 +27,7 @@ const querySchema = boundsSchema.extend({
   centerLng: z.coerce.number(),
   radius: z.coerce.number(),
   scope: z.enum(["city"]).optional(),
-  city: z
-    .enum(supportedCityIds as [CityId, ...CityId[]])
-    .optional(),
+  city: z.enum(supportedCityIdsEnum).optional(),
   categories: z
     .string()
     .optional()

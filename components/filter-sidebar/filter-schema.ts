@@ -12,9 +12,8 @@ import {
 } from "@/lib/config/cities";
 import {
   MapFilterState,
-  supportedCityIds,
+  supportedCityIdsEnum,
   type CannabisCategory,
-  type CityId,
   type RestrictedCategory
 } from "@/types/map";
 
@@ -26,11 +25,10 @@ const restrictedEnum = z.enum(
 );
 
 export const filterSchema = z.object({
-  cityId: z.enum(supportedCityIds as [CityId, ...CityId[]]),
+  cityId: z.enum(supportedCityIdsEnum),
   cannabisCategories: z.array(cannabisEnum),
   restrictedCategories: z.array(restrictedEnum),
-  showClubEnabledAreas: z.boolean(),
-  searchRadius: z.number().min(100).max(5000)
+  showClubEnabledAreas: z.boolean()
 });
 
 export const defaultFilterState: MapFilterState = createDefaultFiltersForCity(defaultCityId);

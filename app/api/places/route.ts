@@ -10,8 +10,8 @@ import {
 } from "@/lib/services/place-repository";
 import { defaultCityId } from "@/lib/config/cities";
 import { isPointInsideCity } from "@/lib/land";
-import type { CannabisCategory, CityId } from "@/types/map";
-import { supportedCityIds } from "@/types/map";
+import type { CannabisCategory } from "@/types/map";
+import { supportedCityIdsEnum } from "@/types/map";
 
 export const runtime = "nodejs";
 
@@ -24,9 +24,7 @@ const querySchema = z.object({
   east: z.coerce.number().optional(),
   west: z.coerce.number().optional(),
   scope: z.enum(["city"]).optional(),
-  city: z
-    .enum(supportedCityIds as [CityId, ...CityId[]])
-    .optional(),
+  city: z.enum(supportedCityIdsEnum).optional(),
   categories: z
     .string()
     .optional()

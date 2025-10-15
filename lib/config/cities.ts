@@ -58,7 +58,6 @@ export function createDefaultFiltersForCity(cityId: CityId): MapFilterState {
     cityId,
     cannabisCategories: [...cannabisCategoryList],
     restrictedCategories: [...city.restrictedCategories],
-    showClubEnabledAreas: true,
-    searchRadius: city.defaultSearchRadius
+    showClubEnabledAreas: true
   };
 }
