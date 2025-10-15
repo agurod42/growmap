@@ -12,6 +12,7 @@ import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import useSWR from "swr";
 
 import { cannabisCategoryOptions } from "@/lib/constants/categories";
+import { getCityDefinition } from "@/lib/config/cities";
 import {
   boundsMaxDistanceToCenter,
   boundsFromCenter,
@@ -190,15 +191,26 @@ const SafeZonePolygon = memo(function SafeZonePolygon({
 
 export default function GrowMap({ filters }: GrowMapProps) {
   const [center, setCenter] = useState(DEFAULT_CENTER);
+  const cityRadius = useMemo(
+    () => getCityDefinition(filters.cityId).defaultSearchRadius,
+    [filters.cityId]
+  );
   const initialBounds = useMemo(
-    () => boundsFromCenter(DEFAULT_CENTER, filters.searchRadius),
-    [filters.searchRadius]
+    () => boundsFromCenter(DEFAULT_CENTER, cityRadius),
+    [cityRadius]
   );
   const [mapBounds, setMapBounds] = useState<MapBoundsState | null>(initialBounds);
-  const [mapZoom, setMapZoom] = useState<number>(() => radiusToZoom(filters.searchRadius));
+  const [mapZoom, setMapZoom] = useState<number>(() => radiusToZoom(cityRadius));
   const [selectedFeature, setSelectedFeature] = useState<PlaceFeature | null>(null);
   const [highlightedZone, setHighlightedZone] = useState<SafeZone | undefined>(undefined);
   const mapRef = useRef<google.maps.Map | null>(null);
+  const searchRadius = useMemo(() => {
+    if (!mapBounds) {
+      return Math.max(cityRadius, 500);
+    }
+    const viewportRadius = boundsMaxDistanceToCenter(mapBounds);
+    return Math.max(viewportRadius, cityRadius, 500);
+  }, [mapBounds, cityRadius]);
 
   const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
@@ -245,13 +257,13 @@ export default function GrowMap({ filters }: GrowMapProps) {
         if (mapCenter) {
           const fallbackBounds = boundsFromCenter(
             { lat: mapCenter.lat(), lng: mapCenter.lng() },
-            filters.searchRadius
+            cityRadius
           );
           setMapBounds(fallbackBounds);
         }
       }
     },
-    [filters.searchRadius]
+    [cityRadius]
   );
 
   const onMapIdle = useCallback(() => {
@@ -276,23 +288,20 @@ export default function GrowMap({ filters }: GrowMapProps) {
   }, []);
 
   useEffect(() => {
-    const targetZoom = radiusToZoom(filters.searchRadius);
     const map = mapRef.current;
+    const targetZoom = radiusToZoom(cityRadius);
     if (!map) {
       setMapZoom(targetZoom);
       return;
     }
     map.setZoom(targetZoom);
     setMapZoom(targetZoom);
-  }, [filters.searchRadius]);
+  }, [cityRadius]);
 
   const cannabisKey = useMemo(() => {
     if (filters.cannabisCategories.length === 0) return null;
     if (!mapBounds) return null;
     if (mapZoom < VIEWPORT_FETCH_ZOOM_THRESHOLD) return null;
-
-    const viewportRadius = boundsMaxDistanceToCenter(mapBounds);
-    const searchRadius = Math.max(filters.searchRadius, viewportRadius, 500);
 
     const params = new URLSearchParams({
       lat: formatCoord(center.lat),
@@ -311,9 +320,9 @@ export default function GrowMap({ filters }: GrowMapProps) {
     mapBounds,
     center,
     filters.cannabisCategories,
-    filters.searchRadius,
     filters.cityId,
-    mapZoom
+    mapZoom,
+    searchRadius
   ]);
 
   const {
@@ -340,7 +349,7 @@ export default function GrowMap({ filters }: GrowMapProps) {
       west: formatCoord(mapBounds.west),
       centerLat: formatCoord(center.lat),
       centerLng: formatCoord(center.lng),
-      radius: String(filters.searchRadius),
+      radius: String(Math.round(searchRadius)),
       categories: filters.restrictedCategories.join(","),
       city: filters.cityId
     });
@@ -349,7 +358,7 @@ export default function GrowMap({ filters }: GrowMapProps) {
     mapBounds,
     center,
     filters.restrictedCategories,
-    filters.searchRadius,
+    searchRadius,
     filters.showClubEnabledAreas,
     filters.cityId,
     mapZoom

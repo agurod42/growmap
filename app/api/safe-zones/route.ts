@@ -25,7 +25,7 @@ const boundsSchema = z.object({
 const querySchema = boundsSchema.extend({
   centerLat: z.coerce.number(),
   centerLng: z.coerce.number(),
-  radius: z.coerce.number(),
+  radius: z.coerce.number().default(1500),
   scope: z.enum(["city"]).optional(),
   city: z.enum(supportedCityIdsEnum).optional(),
   categories: z
