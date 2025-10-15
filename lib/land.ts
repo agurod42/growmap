@@ -68,24 +68,10 @@ function normalizePolygon(polygon: Ring[]): Polygon {
   });
 }
 
-function normalizeMultiPolygon(polygons: MultiPolygon) {
-  return polygons.map((polygon) =>
-    polygon.map((ring) => {
-      if (ring.length === 0) return ring;
-      const [firstLng, firstLat] = ring[0];
-      const [lastLng, lastLat] = ring[ring.length - 1];
-      if (firstLng === lastLng && firstLat === lastLat) {
-        return ring;
-      }
-      return [...ring, [firstLng, firstLat]];
-    })
-  );
-}
-
 export function getLandMultiPolygon(cityId: CityId): MultiPolygon {
   const polygons = loadCityLand(cityId);
   if (polygons.length === 0) return [];
-  return normalizeMultiPolygon(polygons);
+  return polygons;
 }
 
 export function multiPolygonToLatLng(polygons: MultiPolygon): LatLngLiteral[][][] {

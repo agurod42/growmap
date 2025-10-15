@@ -1,12 +1,6 @@
 import polygonClipping from "polygon-clipping";
 
-import {
-  degreesToRadians,
-  haversineDistance,
-  radiansToDegrees,
-  type LatLngLiteral,
-  type MapBounds
-} from "@/lib/geo";
+import { degreesToRadians, haversineDistance, radiansToDegrees, type LatLngLiteral } from "@/lib/geo";
 import {
   getLandMultiPolygon,
   isPointInsideCity,
@@ -31,7 +25,6 @@ type ComputeSafeZonesOptions = {
 };
 
 export function computeSafeZones(
-  bounds: MapBounds,
   restrictedPlaces: PlaceFeature[],
   options: ComputeSafeZonesOptions
 ) {
@@ -41,7 +34,9 @@ export function computeSafeZones(
     return [];
   }
 
-  const relevantPlaces = filterRestrictedPlaces(bounds, restrictedPlaces, cityId, bufferDistanceMeters);
+  const relevantPlaces = restrictedPlaces.filter((place) =>
+    isPointInsideCity(cityId, place.location)
+  );
 
   let allowed: MultiPolygon | null = land;
 
@@ -61,31 +56,6 @@ export function computeSafeZones(
   }
 
   return convertToSafeZones(allowed, relevantPlaces);
-}
-
-function filterRestrictedPlaces(
-  bounds: MapBounds,
-  places: PlaceFeature[],
-  cityId: CityId,
-  bufferDistanceMeters: number
-) {
-  const latMargin = bufferDistanceMeters / 111_132;
-  const centerLat = (bounds.north + bounds.south) / 2;
-  const lngMargin =
-    bufferDistanceMeters / (111_320 * Math.max(Math.cos(degreesToRadians(centerLat)), 1e-6));
-
-  const north = bounds.north + latMargin;
-  const south = bounds.south - latMargin;
-  const east = bounds.east + lngMargin;
-  const west = bounds.west - lngMargin;
-
-  return places.filter((place) => {
-    const { lat, lng } = place.location;
-    if (lat > north || lat < south || lng > east || lng < west) {
-      return false;
-    }
-    return isPointInsideCity(cityId, place.location);
-  });
 }
 
 function createBufferPolygon(center: LatLngLiteral, radiusMeters: number, segments = DEFAULT_BUFFER_SEGMENTS) {

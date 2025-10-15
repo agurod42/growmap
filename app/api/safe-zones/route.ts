@@ -120,7 +120,7 @@ export async function GET(req: Request) {
     isPointInsideCity(cityId, feature.location)
   );
 
-  const zones = computeSafeZones(bounds, restrictedFeatures, {
+  const zones = computeSafeZones(restrictedFeatures, {
     cityId,
     bufferDistanceMeters: getCityClubSafeDistance(cityId)
   });
