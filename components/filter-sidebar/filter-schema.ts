@@ -6,11 +6,18 @@ import {
   cannabisCategoryOptions,
   restrictedCategoryOptions
 } from "@/lib/constants/categories";
-import { MapFilterState } from "@/types/map";
+import { MapFilterState, type CannabisCategory, type RestrictedCategory } from "@/types/map";
+
+const cannabisEnum = z.enum(
+  cannabisCategoryList as [CannabisCategory, ...CannabisCategory[]]
+);
+const restrictedEnum = z.enum(
+  restrictedCategoryList as [RestrictedCategory, ...RestrictedCategory[]]
+);
 
 export const filterSchema = z.object({
-  cannabisCategories: z.array(z.enum(cannabisCategoryList)),
-  restrictedCategories: z.array(z.enum(restrictedCategoryList)),
+  cannabisCategories: z.array(cannabisEnum),
+  restrictedCategories: z.array(restrictedEnum),
   showClubEnabledAreas: z.boolean(),
   searchRadius: z.number().min(100).max(5000)
 });
