@@ -613,7 +613,7 @@ export default function GrowMap({ filters }: GrowMapProps) {
       </div>
 
       {(cannabisLoading || safeZoneLoading) && (
-        <div className="pointer-events-none absolute inset-0 z-10 flex items-start justify-end p-6">
+        <div className="pointer-events-none absolute inset-0 z-10 flex items-end justify-center p-6">
           <div className="pointer-events-auto rounded-large bg-content1/70 px-4 py-2 text-tiny text-foreground-500 shadow-lg">
             {cannabisLoading && <span>Refreshing cannabis data… </span>}
             {safeZoneLoading && <span>Updating club-enabled zones…</span>}
