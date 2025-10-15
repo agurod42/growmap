@@ -1,5 +1,5 @@
 import type { LatLngLiteral } from "@/lib/geo";
-import type { RestrictedCategory } from "./map";
+import type { CityId, RestrictedCategory } from "./map";
 
 export type SafeZone = {
   id: string;
@@ -20,21 +20,11 @@ export type SafeZoneCacheEntry = {
 };
 
 export type SafeZoneResponse = {
-  zones: SafeZone[];
-  restrictedCount: number;
-  restrictedPlaces: import("@/types/places").PlaceFeature[];
+  variants: SafeZoneCacheEntry[];
+  restrictedCategories: RestrictedCategory[];
   meta: {
-    categories: string[];
-    searchRadius: number;
-    scope?: "city" | "viewport";
-    source: "google" | "cache";
-    cache?: {
-      hit?: boolean;
-      ttlMs?: number;
-      updatedAt?: string;
-      safeZoneKey?: string;
-      safeZoneRestrictedPlaceCount?: number;
-      safeZoneCacheHit?: boolean;
-    };
+    cityId: CityId;
+    source: "cache";
+    updatedAt?: string;
   };
 };

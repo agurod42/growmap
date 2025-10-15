@@ -1,14 +1,10 @@
 import { computeSafeZones } from "@/lib/club-zones";
 import { getCityClubSafeDistance, getCityRestrictedCategories } from "@/lib/config/cities";
+import { safeZoneCacheKey } from "@/lib/safe-zone-key";
 import { isPointInsideCity } from "@/lib/land";
 import type { CityId, RestrictedCategory } from "@/types/map";
 import type { PlaceFeature } from "@/types/places";
 import type { SafeZoneCacheEntry } from "@/types/safe-zone";
-
-export function safeZoneCacheKey(categories: RestrictedCategory[]): string {
-  if (!categories.length) return "none";
-  return [...categories].sort().join("|");
-}
 
 function buildCategorySubsets(categories: RestrictedCategory[]): RestrictedCategory[][] {
   const unique = Array.from(new Set(categories));

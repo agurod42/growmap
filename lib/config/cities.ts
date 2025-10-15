@@ -8,7 +8,6 @@ type CityDefinition = {
   displayName: string;
   landGeometryFile: string;
   clubSafeDistanceMeters: number;
-  defaultSearchRadius: number;
   restrictedCategories: RestrictedCategory[];
 };
 
@@ -20,7 +19,6 @@ const cityDefinitions: Record<CityId, CityDefinition> = {
     displayName: "Montevideo, Uruguay",
     landGeometryFile: "data/land/montevideo.geojson",
     clubSafeDistanceMeters: 500,
-    defaultSearchRadius: 1500,
     restrictedCategories: ["school", "cultural_center", "rehab_center"]
   }
 };
