@@ -302,7 +302,8 @@ export default function GrowMap({ filters }: GrowMapProps) {
       north: formatCoord(mapBounds.north),
       south: formatCoord(mapBounds.south),
       east: formatCoord(mapBounds.east),
-      west: formatCoord(mapBounds.west)
+      west: formatCoord(mapBounds.west),
+      city: filters.cityId
     });
 
     return `/api/places?${params.toString()}`;
@@ -311,6 +312,7 @@ export default function GrowMap({ filters }: GrowMapProps) {
     center,
     filters.cannabisCategories,
     filters.searchRadius,
+    filters.cityId,
     mapZoom
   ]);
 
@@ -339,7 +341,8 @@ export default function GrowMap({ filters }: GrowMapProps) {
       centerLat: formatCoord(center.lat),
       centerLng: formatCoord(center.lng),
       radius: String(filters.searchRadius),
-      categories: filters.restrictedCategories.join(",")
+      categories: filters.restrictedCategories.join(","),
+      city: filters.cityId
     });
     return `/api/safe-zones?${params.toString()}`;
   }, [
@@ -348,6 +351,7 @@ export default function GrowMap({ filters }: GrowMapProps) {
     filters.restrictedCategories,
     filters.searchRadius,
     filters.showClubEnabledAreas,
+    filters.cityId,
     mapZoom
   ]);
 

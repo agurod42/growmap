@@ -15,6 +15,7 @@ import { Suspense, useMemo, useState } from "react";
 import { FilterSidebar } from "@/components/filter-sidebar";
 import { defaultFilterState } from "@/components/filter-sidebar/filter-schema";
 import { LoadingOverlay } from "@/components/loading-overlay";
+import { createDefaultFiltersForCity } from "@/lib/config/cities";
 import { MapFilterState } from "@/types/map";
 
 const GrowMap = dynamic(() => import("@/components/map/grow-map"), {
@@ -25,7 +26,8 @@ const GrowMap = dynamic(() => import("@/components/map/grow-map"), {
 export default function HomePage() {
   const [filters, setFilters] = useState<MapFilterState>(defaultFilterState);
   const disclosure = useDisclosure();
-  const handleResetFilters = () => setFilters(defaultFilterState);
+  const handleResetFilters = () =>
+    setFilters((previous) => createDefaultFiltersForCity(previous.cityId));
 
   const filterSidebar = useMemo(
     () => (

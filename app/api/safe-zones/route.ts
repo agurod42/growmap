@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
-import { restrictedCategoryList } from "@/lib/constants/categories";
 import { boundsMaxDistanceToCenter, type MapBounds } from "@/lib/geo";
 import { computeSafeZones } from "@/lib/club-zones";
 import { readCachedPlaces } from "@/lib/storage/place-cache";
@@ -9,7 +8,10 @@ import {
   MissingPlaceDatasetError,
   queryRestrictedPlaces
 } from "@/lib/services/place-repository";
-import type { RestrictedCategory } from "@/types/map";
+import { defaultCityId, getCityClubSafeDistance, getCityRestrictedCategories } from "@/lib/config/cities";
+import { isPointInsideCity } from "@/lib/land";
+import type { CityId, RestrictedCategory } from "@/types/map";
+import { supportedCityIds } from "@/types/map";
 
 export const runtime = "nodejs";
 
@@ -25,6 +27,9 @@ const querySchema = boundsSchema.extend({
   centerLng: z.coerce.number(),
   radius: z.coerce.number(),
   scope: z.enum(["city"]).optional(),
+  city: z
+    .enum(supportedCityIds as [CityId, ...CityId[]])
+    .optional(),
   categories: z
     .string()
     .optional()
@@ -39,12 +44,25 @@ export async function GET(req: Request) {
     return NextResponse.json({ error: parsed.error.flatten() }, { status: 400 });
   }
 
-  const { north, south, east, west, centerLat, centerLng, radius, categories, scope } = parsed.data;
+  const {
+    north,
+    south,
+    east,
+    west,
+    centerLat,
+    centerLng,
+    radius,
+    categories,
+    scope,
+    city: requestedCity
+  } = parsed.data;
   const bounds: MapBounds = { north, south, east, west };
   const center = { lat: centerLat, lng: centerLng };
+  const cityId = requestedCity ?? defaultCityId;
 
-  const allowed = new Set<string>(restrictedCategoryList);
-  const requested = (categories ?? restrictedCategoryList).filter((category) =>
+  const cityRestrictedCategories = getCityRestrictedCategories(cityId);
+  const allowed = new Set<string>(cityRestrictedCategories);
+  const requested = (categories ?? cityRestrictedCategories).filter((category) =>
     allowed.has(category)
   ) as RestrictedCategory[];
 
@@ -98,13 +116,21 @@ export async function GET(req: Request) {
     }
   }
 
-  const zones = computeSafeZones(bounds, restrictedFeatures);
+  restrictedFeatures = restrictedFeatures.filter((feature) =>
+    isPointInsideCity(cityId, feature.location)
+  );
+
+  const zones = computeSafeZones(bounds, restrictedFeatures, {
+    cityId,
+    bufferDistanceMeters: getCityClubSafeDistance(cityId)
+  });
 
   return NextResponse.json({
     zones,
     restrictedCount: restrictedFeatures.length,
     restrictedPlaces: restrictedFeatures,
     meta: {
+      cityId,
       categories: requested,
       searchRadius,
       scope: useCityScope ? "city" : "viewport",

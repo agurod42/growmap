@@ -9,14 +9,14 @@ import {
 } from "@/lib/geo";
 import {
   getLandMultiPolygon,
+  isPointInsideCity,
   latLngToRing,
   multiPolygonToLatLng,
   ringAreaSquareMeters
 } from "@/lib/land";
 import type { PlaceFeature } from "@/types/places";
 import type { SafeZone } from "@/types/safe-zone";
-
-export const CLUB_SAFE_DISTANCE_METERS = 500;
+import type { CityId } from "@/types/map";
 
 const DEFAULT_BUFFER_SEGMENTS = 64;
 const MIN_SAFE_ZONE_AREA_SQ_METERS = 5_000;
@@ -25,19 +25,29 @@ type Coordinate = [number, number];
 type Polygon = Coordinate[][];
 type MultiPolygon = Polygon[];
 
-export function computeSafeZones(bounds: MapBounds, restrictedPlaces: PlaceFeature[]) {
-  const land = getLandMultiPolygon(bounds);
+type ComputeSafeZonesOptions = {
+  cityId: CityId;
+  bufferDistanceMeters: number;
+};
+
+export function computeSafeZones(
+  bounds: MapBounds,
+  restrictedPlaces: PlaceFeature[],
+  options: ComputeSafeZonesOptions
+) {
+  const { cityId, bufferDistanceMeters } = options;
+  const land = getLandMultiPolygon(cityId);
   if (land.length === 0) {
     return [];
   }
 
-  const relevantPlaces = filterRestrictedPlaces(bounds, restrictedPlaces);
+  const relevantPlaces = filterRestrictedPlaces(bounds, restrictedPlaces, cityId, bufferDistanceMeters);
 
   let allowed: MultiPolygon | null = land;
 
   if (relevantPlaces.length > 0) {
     const bufferPolygons: Polygon[] = relevantPlaces
-      .map((place) => createBufferPolygon(place.location, CLUB_SAFE_DISTANCE_METERS))
+      .map((place) => createBufferPolygon(place.location, bufferDistanceMeters))
       .filter((polygon) => polygon.length > 0)
       .map((ring) => [ring]);
     const mergedBuffers = mergePolygons(bufferPolygons);
@@ -50,14 +60,19 @@ export function computeSafeZones(bounds: MapBounds, restrictedPlaces: PlaceFeatu
     return [];
   }
 
-  return convertToSafeZones(allowed, restrictedPlaces);
+  return convertToSafeZones(allowed, relevantPlaces);
 }
 
-function filterRestrictedPlaces(bounds: MapBounds, places: PlaceFeature[]) {
-  const latMargin = CLUB_SAFE_DISTANCE_METERS / 111_132;
+function filterRestrictedPlaces(
+  bounds: MapBounds,
+  places: PlaceFeature[],
+  cityId: CityId,
+  bufferDistanceMeters: number
+) {
+  const latMargin = bufferDistanceMeters / 111_132;
   const centerLat = (bounds.north + bounds.south) / 2;
   const lngMargin =
-    CLUB_SAFE_DISTANCE_METERS / (111_320 * Math.max(Math.cos(degreesToRadians(centerLat)), 1e-6));
+    bufferDistanceMeters / (111_320 * Math.max(Math.cos(degreesToRadians(centerLat)), 1e-6));
 
   const north = bounds.north + latMargin;
   const south = bounds.south - latMargin;
@@ -66,7 +81,10 @@ function filterRestrictedPlaces(bounds: MapBounds, places: PlaceFeature[]) {
 
   return places.filter((place) => {
     const { lat, lng } = place.location;
-    return lat <= north && lat >= south && lng <= east && lng >= west;
+    if (lat > north || lat < south || lng > east || lng < west) {
+      return false;
+    }
+    return isPointInsideCity(cityId, place.location);
   });
 }
 

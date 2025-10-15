@@ -1,30 +1,39 @@
 import { readFileSync } from "fs";
 import path from "path";
 
-import { degreesToRadians, type LatLngLiteral, type MapBounds } from "@/lib/geo";
+import { getCityLandGeometryFile } from "@/lib/config/cities";
+import { degreesToRadians, pointInPolygon, type LatLngLiteral } from "@/lib/geo";
+import type { CityId } from "@/types/map";
 
 type Coordinate = [number, number];
 type Ring = Coordinate[];
 type Polygon = Ring[];
 type MultiPolygon = Polygon[];
 
-const LAND_GEOJSON_PATH = path.join(process.cwd(), "data", "land", "montevideo.geojson");
+const landCache = new Map<CityId, MultiPolygon>();
+const landLatLngCache = new Map<CityId, LatLngLiteral[][][]>();
 
-let cachedLandMultiPolygon: MultiPolygon | null = null;
-
-function loadUruguayLand(): MultiPolygon {
-  if (cachedLandMultiPolygon) {
-    return cachedLandMultiPolygon;
+function loadCityLand(cityId: CityId): MultiPolygon {
+  const cached = landCache.get(cityId);
+  if (cached) {
+    return cached;
   }
 
-  const raw = readFileSync(LAND_GEOJSON_PATH, "utf-8");
+  const geometryFile = getCityLandGeometryFile(cityId);
+  const filePath = path.join(process.cwd(), geometryFile);
+  const raw = readFileSync(filePath, "utf-8");
   const parsed = JSON.parse(raw) as {
     type: string;
     features: Array<{
-      geometry: {
-        type: "Polygon" | "MultiPolygon";
-        coordinates: Coordinate[][] | Coordinate[][][];
-      };
+      geometry:
+        | {
+            type: "Polygon";
+            coordinates: Coordinate[][];
+          }
+        | {
+            type: "MultiPolygon";
+            coordinates: Coordinate[][][];
+          };
     }>;
   };
 
@@ -35,15 +44,15 @@ function loadUruguayLand(): MultiPolygon {
     if (!geometry) continue;
 
     if (geometry.type === "Polygon") {
-      polygons.push(normalizePolygon(geometry.coordinates as Ring[]));
+      polygons.push(normalizePolygon(geometry.coordinates));
     } else if (geometry.type === "MultiPolygon") {
-      for (const polygon of geometry.coordinates as Polygon[]) {
+      for (const polygon of geometry.coordinates) {
         polygons.push(normalizePolygon(polygon));
       }
     }
   }
 
-  cachedLandMultiPolygon = polygons;
+  landCache.set(cityId, polygons);
   return polygons;
 }
 
@@ -57,13 +66,6 @@ function normalizePolygon(polygon: Ring[]): Polygon {
     }
     return [...ring, [firstLng, firstLat]];
   });
-}
-
-export function getLandMultiPolygon(_bounds: MapBounds): MultiPolygon {
-  const land = loadUruguayLand();
-  if (land.length === 0) return [];
-
-  return normalizeMultiPolygon(land);
 }
 
 function normalizeMultiPolygon(polygons: MultiPolygon) {
@@ -80,6 +82,12 @@ function normalizeMultiPolygon(polygons: MultiPolygon) {
   );
 }
 
+export function getLandMultiPolygon(cityId: CityId): MultiPolygon {
+  const polygons = loadCityLand(cityId);
+  if (polygons.length === 0) return [];
+  return normalizeMultiPolygon(polygons);
+}
+
 export function multiPolygonToLatLng(polygons: MultiPolygon): LatLngLiteral[][][] {
   return polygons.map((polygon) =>
     polygon.map((ring) =>
@@ -89,6 +97,27 @@ export function multiPolygonToLatLng(polygons: MultiPolygon): LatLngLiteral[][][
       }))
     )
   );
+}
+
+function getLandLatLngPolygons(cityId: CityId): LatLngLiteral[][][] {
+  const cached = landLatLngCache.get(cityId);
+  if (cached) {
+    return cached;
+  }
+
+  const latLngPolygons = multiPolygonToLatLng(getLandMultiPolygon(cityId));
+  landLatLngCache.set(cityId, latLngPolygons);
+  return latLngPolygons;
+}
+
+export function isPointInsideCity(cityId: CityId, point: LatLngLiteral) {
+  const polygons = getLandLatLngPolygons(cityId);
+  return polygons.some((polygon) => {
+    if (polygon.length === 0) return false;
+    const [outer, ...holes] = polygon;
+    if (!pointInPolygon(point, outer)) return false;
+    return holes.every((hole) => !pointInPolygon(point, hole));
+  });
 }
 
 export function latLngToRing(points: LatLngLiteral[]): Ring {

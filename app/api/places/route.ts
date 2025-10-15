@@ -8,7 +8,10 @@ import {
   MissingPlaceDatasetError,
   queryCannabisPlaces
 } from "@/lib/services/place-repository";
-import type { CannabisCategory } from "@/types/map";
+import { defaultCityId } from "@/lib/config/cities";
+import { isPointInsideCity } from "@/lib/land";
+import type { CannabisCategory, CityId } from "@/types/map";
+import { supportedCityIds } from "@/types/map";
 
 export const runtime = "nodejs";
 
@@ -21,6 +24,9 @@ const querySchema = z.object({
   east: z.coerce.number().optional(),
   west: z.coerce.number().optional(),
   scope: z.enum(["city"]).optional(),
+  city: z
+    .enum(supportedCityIds as [CityId, ...CityId[]])
+    .optional(),
   categories: z
     .string()
     .optional()
@@ -40,7 +46,8 @@ export async function GET(req: Request) {
     );
   }
 
-  const { lat, lng, radius, categories, north, south, east, west, scope } = parsed.data;
+  const { lat, lng, radius, categories, north, south, east, west, scope, city } = parsed.data;
+  const cityId = city ?? defaultCityId;
 
   const allowed = new Set<string>(cannabisCategoryList);
   const requested = (categories ?? cannabisCategoryList).filter((category) =>
@@ -58,14 +65,17 @@ export async function GET(req: Request) {
       );
     }
 
-    const filtered = cache.cannabis.filter((feature) => {
-      return !feature.cannabisCategory || requested.includes(feature.cannabisCategory);
-    });
+    const filtered = cache.cannabis
+      .filter((feature) => {
+        return !feature.cannabisCategory || requested.includes(feature.cannabisCategory);
+      })
+      .filter((feature) => isPointInsideCity(cityId, feature.location));
 
     return NextResponse.json({
       features: filtered,
       source: "cache",
       meta: {
+        cityId,
         scope: "city",
         updatedAt: cache.updatedAt,
         bounds: cache.meta.bounds,
@@ -104,7 +114,18 @@ export async function GET(req: Request) {
       categories: requested
     });
 
-    return NextResponse.json(response);
+    const filteredFeatures = response.features.filter((feature) =>
+      isPointInsideCity(cityId, feature.location)
+    );
+
+    return NextResponse.json({
+      ...response,
+      features: filteredFeatures,
+      meta: {
+        ...(response.meta ?? {}),
+        cityId
+      }
+    });
   } catch (error) {
     if (error instanceof MissingPlaceDatasetError) {
       return NextResponse.json({ error: error.message }, { status: 503 });
