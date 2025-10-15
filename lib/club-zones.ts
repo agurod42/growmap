@@ -1,8 +1,10 @@
+import concaveman from "concaveman";
 import {
   cellToCoordinates,
   createHexagonGrid,
   degreesToRadians,
   haversineDistance,
+  pointInPolygon,
   type MapBounds
 } from "./geo";
 import type { PlaceFeature } from "@/types/places";
@@ -49,6 +51,20 @@ export function computeSafeZones(bounds: MapBounds, restrictedPlaces: PlaceFeatu
     west: restrictedBounds.west - lngMarginDegrees
   };
 
+  const hullPoints =
+    restrictedPlaces.length >= 3
+      ? concaveman(
+          restrictedPlaces.map((place) => [place.location.lng, place.location.lat]),
+          1.5,
+          10
+        )
+      : null;
+
+  const landPolygon =
+    hullPoints && hullPoints.length >= 3
+      ? hullPoints.map(([lng, lat]) => ({ lat, lng }))
+      : null;
+
   const grid = createHexagonGrid(bounds, 9);
   const zones: SafeZone[] = [];
 
@@ -63,6 +79,16 @@ export function computeSafeZones(bounds: MapBounds, restrictedPlaces: PlaceFeatu
 
     if (outsideExpandedBounds) {
       continue;
+    }
+
+    if (landPolygon) {
+      const centerInside = pointInPolygon(center, landPolygon);
+      const vertexInside = polygon.some((vertex) => pointInPolygon(vertex, landPolygon));
+      const hullVertexInside = landPolygon.some((vertex) => pointInPolygon(vertex, polygon));
+
+      if (!centerInside && !vertexInside && !hullVertexInside) {
+        continue;
+      }
     }
 
     const minDistanceMeters = restrictedPlaces.reduce((distance, place) => {

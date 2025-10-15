@@ -135,3 +135,29 @@ export function cellToCoordinates(cell: string) {
 export function pointToCell(position: LatLngLiteral, resolution = 9) {
   return latLngToCell(position.lat, position.lng, resolution);
 }
+
+export function pointInPolygon(point: LatLngLiteral, polygon: LatLngLiteral[]) {
+  if (polygon.length < 3) {
+    return false;
+  }
+
+  let inside = false;
+  for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i, i += 1) {
+    const xi = polygon[i].lng;
+    const yi = polygon[i].lat;
+    const xj = polygon[j].lng;
+    const yj = polygon[j].lat;
+
+    if (yi > point.lat !== yj > point.lat) {
+      const denominator = yj - yi;
+      if (denominator !== 0) {
+        const xIntersect = ((xj - xi) * (point.lat - yi)) / denominator + xi;
+        if (point.lng < xIntersect) {
+          inside = !inside;
+        }
+      }
+    }
+  }
+
+  return inside;
+}
