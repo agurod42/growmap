@@ -1,0 +1,3669 @@
+{
+  "updatedAt": "2025-10-15T14:23:15.340Z",
+  "cannabis": [
+    {
+      "id": "ChIJky0NUiSBn5URMSGkWhjjytI",
+      "name": "Indajaus Grow Shop",
+      "address": "Av. Uruguay 1123, 11100 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9032109,
+        "lng": -56.1923509
+      },
+      "categories": [
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "userRatingCount": 48,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.indajaus.com.uy/",
+      "phoneNumber": "+598 92 634 670",
+      "type": "cannabis",
+      "cannabisCategory": "other"
+    },
+    {
+      "id": "ChIJWWbuYiiBn5URx30yrQC9N1I",
+      "name": "Tu Cultivo Grow Shop",
+      "address": "José Ellauri 1286, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9080766,
+        "lng": -56.1494408
+      },
+      "categories": [
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "rating": 4.7,
+      "userRatingCount": 285,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.tucultivo.uy/",
+      "phoneNumber": "+598 92 489 706",
+      "type": "cannabis",
+      "cannabisCategory": "other"
+    },
+    {
+      "id": "ChIJw4i0uwmBn5URBaXSXOrkvnE",
+      "name": "hemp passion grow shop",
+      "address": "Av. Brasil 2647, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9075898,
+        "lng": -56.157078899999995
+      },
+      "categories": [
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "userRatingCount": 92,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.hemppassion.com.uy/",
+      "phoneNumber": "+598 2707 0666",
+      "type": "cannabis",
+      "cannabisCategory": "other"
+    },
+    {
+      "id": "ChIJm2G8w4LXoZURqxS8sTRCR9M",
+      "name": "Ventas GR",
+      "address": "Av. Ideario Artiguista 2364 bis, 12600 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8244032,
+        "lng": -56.2940322
+      },
+      "categories": [
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 96 432 286",
+      "type": "cannabis",
+      "cannabisCategory": "grow_shop"
+    },
+    {
+      "id": "ChIJ00yP3CGBn5URYrz2mlgr1aI",
+      "name": "DARK WEED GROWSHOP",
+      "address": "Pres. Ing. José Serrato 2591, 12000 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.87446,
+        "lng": -56.1412847
+      },
+      "categories": [
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "rating": 4.1,
+      "userRatingCount": 19,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.intagram.com/darkweed_growshop/",
+      "phoneNumber": "+598 96 778 558",
+      "type": "cannabis",
+      "cannabisCategory": "other"
+    },
+    {
+      "id": "ChIJoTbOufCAn5URWneeprMivkI",
+      "name": "Indajaus Grow Shop",
+      "address": "Av. Centenario 3141, 11600 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8825322,
+        "lng": -56.1527238
+      },
+      "categories": [
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "rating": 4.6,
+      "userRatingCount": 649,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.indajaus.com.uy/",
+      "phoneNumber": "+598 92 634 670",
+      "type": "cannabis",
+      "cannabisCategory": "other"
+    },
+    {
+      "id": "ChIJe0ol7L4roJURoIQ7DCtu3nc",
+      "name": "The Good Place GROW SHOP",
+      "address": "Av. Gral. Flores 5450, 13000 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8302362,
+        "lng": -56.141915399999995
+      },
+      "categories": [
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "rating": 5,
+      "userRatingCount": 8,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://instagram.com/thegoodplace.grow",
+      "phoneNumber": "+598 98 673 184",
+      "type": "cannabis",
+      "cannabisCategory": "grow_shop"
+    },
+    {
+      "id": "ChIJ2WJu0OWHn5URcUPWKg6FipQ",
+      "name": "Mr grow",
+      "address": "4W6V+35X ROMA LOC 04, Av. Alfredo Arocena, 11500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8898697,
+        "lng": -56.0570155
+      },
+      "categories": [
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "userRatingCount": 12,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2605 8448",
+      "type": "cannabis",
+      "cannabisCategory": "grow_shop"
+    },
+    {
+      "id": "ChIJAwrGNogroJURYDIfTdfzkz0",
+      "name": "CANNABICHOS GROW SHOP",
+      "address": "13000 Montevideo, Montevideo Department, Uruguay",
+      "location": {
+        "lat": -34.8186282,
+        "lng": -56.136517299999994
+      },
+      "categories": [
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.9,
+      "userRatingCount": 35,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.instagram.com/cannabichos.uy",
+      "type": "cannabis",
+      "cannabisCategory": "other"
+    },
+    {
+      "id": "ChIJ81Rxk_h_n5UR5HN6OOw-oiU",
+      "name": "Cannabis Ciudad Vieja",
+      "address": "25 de Mayo 315, 11000 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9068997,
+        "lng": -56.2092178
+      },
+      "categories": [
+        "pharmacy",
+        "health",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "userRatingCount": 10,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 98 662 412",
+      "type": "cannabis",
+      "cannabisCategory": "other"
+    },
+    {
+      "id": "ChIJuy006ByBn5UR3JdElQC4ijA",
+      "name": "Santuario Urbano de Cannabis Medicinal",
+      "address": "Luciano Romero 3316, 11600 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.882899,
+        "lng": -56.1444197
+      },
+      "categories": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 98 713 049",
+      "type": "cannabis",
+      "cannabisCategory": "other"
+    }
+  ],
+  "restricted": [
+    {
+      "id": "ChIJ0bC3g9OBn5UReYrASrPoXak",
+      "name": "Juanas cantina sushi & bar",
+      "address": "Ntra. Sra. de la Encina 1593, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.909218599999996,
+        "lng": -56.180657000000004
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 5,
+      "userRatingCount": 13,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://juanapalermo.com.uy/",
+      "phoneNumber": "+598 99 241 187",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ3U5IqK6Bn5URfnqZ5BX4P8U",
+      "name": "St. Brendan's School",
+      "address": "Av.Gral Rivera 2314, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.902340099999996,
+        "lng": -56.165094499999995
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.stbrendan.edu.uy/site2018/",
+      "phoneNumber": "+598 2409 4939",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJp08dh9KBn5URzqG0CUrAapg",
+      "name": "Life School",
+      "address": "Canelones 1069, 11100 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.908713,
+        "lng": -56.192837
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.life.edu.uy/",
+      "phoneNumber": "+598 2901 5954",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ3bDs4cuBn5URs7-lhpbzqzY",
+      "name": "School and Liceo Elbio Fernández",
+      "address": "Canelones 1382, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.908676,
+        "lng": -56.1853573
+      },
+      "categories": [
+        "preschool",
+        "school",
+        "child_care_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.elbiofernandez.edu.uy/",
+      "phoneNumber": "+598 2901 1254",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJN0VL6a-Bn5URBm-wUek4yqk",
+      "name": "Talleres Don Bosco",
+      "address": "Maldonado 2125, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9076328,
+        "lng": -56.169000000000004
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.7,
+      "userRatingCount": 223,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.talleresdonbosco.edu.uy/",
+      "phoneNumber": "+598 2400 4125",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJY94Yfs2Bn5UR-FKZKhExpMI",
+      "name": "Alianza Cultural Uruguay-United States",
+      "address": "Paraguay 1217, 11100 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9085106,
+        "lng": -56.1923241
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "userRatingCount": 134,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://alianza.edu.uy/",
+      "phoneNumber": "+598 2902 5160",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ1w6mcVaBn5URj_xfiiFOpzM",
+      "name": "London Nursery & School",
+      "address": "Santiago de Chile 1023, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9114801,
+        "lng": -56.1849676
+      },
+      "categories": [
+        "preschool",
+        "school",
+        "child_care_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 5,
+      "userRatingCount": 41,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.londonschool.edu.uy/",
+      "phoneNumber": "+598 98 730 117",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJl4h6KriBn5UR9LgXRxHmGp0",
+      "name": "Jardín C.R.E.A.R.",
+      "address": "San Salvador 1679, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9115974,
+        "lng": -56.1785996
+      },
+      "categories": [
+        "preschool",
+        "school",
+        "child_care_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 5,
+      "userRatingCount": 21,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2419 4581",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJg2IRB82Bn5URtMBpIwo8THk",
+      "name": "Escuela de Enfermería Montevideo",
+      "address": "Paraguay 1380, 11100 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9054226,
+        "lng": -56.1924231
+      },
+      "categories": [
+        "school",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "userRatingCount": 92,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.escuelamontevideo.uy/",
+      "phoneNumber": "+598 2901 1014",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJSwsGeMKBn5URtzi83XIC_p0",
+      "name": "Cocktail Paradise",
+      "address": "Dr. Joaquín Requena y, 11000 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9157797,
+        "lng": -56.1678741
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.instagram.com/cocktailparadiseuy",
+      "phoneNumber": "+598 92 800 995",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJLRW_LcqBn5URDbMsHG3ysaE",
+      "name": "Colegio Seminario",
+      "address": "Soriano 1472, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.90742240000001,
+        "lng": -56.1837944
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.seminario.edu.uy/",
+      "phoneNumber": "+598 2418 4075",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJfTwMLruBn5URCwdQGjmT1lE",
+      "name": "Preuniversitario Ciudad de San Felipe",
+      "address": "Dr. Pablo de María 929, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9119909,
+        "lng": -56.1705663
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.sanfelipe.edu.uy/",
+      "phoneNumber": "+598 2412 1472",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJKfyQwLeBn5URlXs4WBQQ46g",
+      "name": "Instituto de Actuación de Mvd",
+      "address": "Isla de Flores 1627, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9105711,
+        "lng": -56.1798042
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.6,
+      "userRatingCount": 25,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.iam.com.uy/",
+      "phoneNumber": "+598 2410 7627",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJv1GRRiqAn5URFBVtJB9dm0M",
+      "name": "Carolina Agis selfcare",
+      "address": "piso 3, Rincón 610, 11000 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9060237,
+        "lng": -56.2030771
+      },
+      "categories": [
+        "beautician",
+        "spa",
+        "massage",
+        "school",
+        "hair_care",
+        "beauty_salon",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.9,
+      "userRatingCount": 47,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.instagram.com/caroagis_selfcare?igsh=MWw2MDd3bjk4bnJjYw==",
+      "phoneNumber": "+598 91 413 252",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJEybbfbSBn5URIVXQyZC6bo8",
+      "name": "Alfredo Vázquez Acevedo Institute",
+      "address": "José Enrique Rodó 1875, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9034182,
+        "lng": -56.176049799999994
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://iava.edu.uy/",
+      "phoneNumber": "+598 2400 9246",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJc-DtJ3mBn5URdQIntZpLMXM",
+      "name": "Instituto Víctor Bernardez & Asociados",
+      "address": "Canelones 1819, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9074932,
+        "lng": -56.1758568
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 5,
+      "userRatingCount": 3,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2410 1011",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJd8i9FgCBn5URFNyUkvmsO3E",
+      "name": "Mundo de Reinas Academia",
+      "address": "Av. 18 de Julio 1077, 11100 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.905872099999996,
+        "lng": -56.1928485
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 5,
+      "userRatingCount": 3,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 98 166 531",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJbVl-sMuBn5URaGnQdwG8FAY",
+      "name": "The Anglo School Centro",
+      "address": "Dr Javier Barrios Amorín 1275, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.906826599999995,
+        "lng": -56.1846484
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.theangloschool.edu.uy/",
+      "phoneNumber": "+598 2902 3773",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ0-RXo-6Bn5URXekyAJ4opEo",
+      "name": "Casa Escuela Paí",
+      "address": "Tacuarembó 1396, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9053524,
+        "lng": -56.181899599999994
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 5,
+      "userRatingCount": 6,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 92 900 999",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJw0guzzKAn5URzUL2rjPOA0M",
+      "name": "Escuela Nº 2 República Argentina y Escuela 269",
+      "address": "Colonia 1194, 11100 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9053019,
+        "lng": -56.190595099999996
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.1,
+      "userRatingCount": 21,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2900 7046",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ5WgOxAuBn5URbJTLI9-SI1c",
+      "name": "St. Andrew's School",
+      "address": "Luis B. Cavia 2791, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9098024,
+        "lng": -56.1548963
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.st-andrews.edu.uy/",
+      "phoneNumber": "+598 2709 4951",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJwU4I7jiBn5URR9umvjBL_wM",
+      "name": "Lycée Français de Montevideo",
+      "address": "Benigno Paiva 1160, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.904104499999995,
+        "lng": -56.128971
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.6,
+      "userRatingCount": 105,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.lf.edu.uy/",
+      "phoneNumber": "+598 2628 5544",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJqRFG6SyAn5URAYScTrCT5bA",
+      "name": "Fundation Forge",
+      "address": "004, Marco Bruto 1222, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9055956,
+        "lng": -56.138336599999995
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 3.8,
+      "userRatingCount": 17,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://fondationforge.org/uy/tu-futuro",
+      "phoneNumber": "+598 2622 9422",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJzRMxDHWBn5URWkXhsDa8uL8",
+      "name": "EduSchool",
+      "address": "Francisco Solano Antuña 2618, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.916601,
+        "lng": -56.157148
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.eduschool.edu.uy/",
+      "phoneNumber": "+598 2710 2572",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ8aecqxeBn5URmbtI_8uATrY",
+      "name": "Escuela de Entrenadores MIFF",
+      "address": "Basilio Pereira de la Luz 1333, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9039509,
+        "lng": -56.1419803
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.8,
+      "userRatingCount": 33,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.escuelamiff.edu.uy/",
+      "phoneNumber": "+598 99 923 433",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJIQKNmQiBn5URynPBuEWMI-I",
+      "name": "Deutsche Schule Montevideo",
+      "address": "Av. Dr. Francisco Soca 1356, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9047459,
+        "lng": -56.155148
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "userRatingCount": 136,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.dsm.edu.uy/",
+      "phoneNumber": "+598 2708 4381",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJSX1HN2GBn5UR1ZNHz-cBYhk",
+      "name": "Happy nest",
+      "address": "Luis Lamas 3336, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9058965,
+        "lng": -56.1415815
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.9,
+      "userRatingCount": 12,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.happynestmontevideo.com/",
+      "phoneNumber": "+598 99 554 330",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJdfECdAiBn5URpsMf7ge8NYU",
+      "name": "Blue Moon - School and Kindergarten",
+      "address": "Charrúa 2605, 11600 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.905025699999996,
+        "lng": -56.1573146
+      },
+      "categories": [
+        "preschool",
+        "child_care_agency",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.9,
+      "userRatingCount": 52,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.facebook.com/bluemoonuyoficial/",
+      "phoneNumber": "+598 2707 0924",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJIfbSFnaBn5URE7IXBH0RsV4",
+      "name": "Juan Zorrilla de San Martín",
+      "address": "José Ellauri 527, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9208299,
+        "lng": -56.1574396
+      },
+      "categories": [
+        "primary_school",
+        "preschool",
+        "child_care_agency",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://zorrilla.maristas.edu.uy/",
+      "phoneNumber": "+598 2711 9140",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJHbcVmhOBn5UREozht2lUE-I",
+      "name": "Masters' Institute",
+      "address": "Blvr. 26 de Marzo 3270, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.907238299999996,
+        "lng": -56.1431982
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 5,
+      "userRatingCount": 21,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.masters.com.uy/",
+      "phoneNumber": "+598 99 436 436",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ5RNF2AuBn5URDfLlbVOSDOA",
+      "name": "Queen's College School",
+      "address": "Libertad 2730, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.909163899999996,
+        "lng": -56.155061499999995
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.queensschool.edu.uy/",
+      "phoneNumber": "+598 2708 0924",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJQS7xkQ2Bn5URxo4GnwDUU5I",
+      "name": "Drivers Academy Accord",
+      "address": "Gabriel Pereira 3085, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9080067,
+        "lng": -56.148923599999996
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "userRatingCount": 229,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.academiaaccord.com.uy/",
+      "phoneNumber": "+598 94 580 046",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJs5VsoBqBn5UR5e5F0d8Dgz8",
+      "name": "MBC Montevideo Boulder Club",
+      "address": "Alejo Rosell y Rius 1449, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9013859,
+        "lng": -56.1464314
+      },
+      "categories": [
+        "sports_coaching",
+        "sports_activity_location",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.9,
+      "userRatingCount": 114,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.instagram.com/bouldermbc/",
+      "phoneNumber": "+598 92 477 033",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJQ796L6iBn5URk1lSdOuF1Rg",
+      "name": "Simon Bolivar School",
+      "address": "Simón Bolivar 1361, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.903612599999995,
+        "lng": -56.159397
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2707 2848",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJIWrFQBWBn5UR2k9i6iWJSJs",
+      "name": "Clinica Ceepal",
+      "address": "Marco Bruto 1186, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9064749,
+        "lng": -56.138014299999995
+      },
+      "categories": [
+        "doctor",
+        "school",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.9,
+      "userRatingCount": 57,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://ceepal.com.uy/",
+      "phoneNumber": "+598 2622 4311",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ1UGcQJD1n5URVnDAsQ01IuY",
+      "name": "Clases particulares de Matemáticas y Física",
+      "address": "Palmar y, 11600 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9022694,
+        "lng": -56.156381499999995
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.9,
+      "userRatingCount": 42,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 94 137 272",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJa6dpAXSBn5UROIkSfoO8HGw",
+      "name": "Ivy Thomas Early Years",
+      "address": "Pedro Fco. Berro 728, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9180035,
+        "lng": -56.1535585
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 5,
+      "userRatingCount": 1,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2716 1950",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJjWeNXnOBn5URl4Y24ueVhbY",
+      "name": "Liceo N° 28, Purificación",
+      "address": "Bv. España 2772, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.914356999999995,
+        "lng": -56.152991300000004
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://liceo28.ces.edu.uy/",
+      "phoneNumber": "+598 2710 1114",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJfYEd23OBn5URDoj9QKT4NVc",
+      "name": "Ivy Thomas Memorial School",
+      "address": "Roque Graseras 775, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9172313,
+        "lng": -56.1514647
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.ivythomas.edu.uy/",
+      "phoneNumber": "+598 2710 0502",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJXaTfAECBn5URC_lL2tpww2s",
+      "name": "Carrusel",
+      "address": "Julio César 1222, 11300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9059211,
+        "lng": -56.1395566
+      },
+      "categories": [
+        "preschool",
+        "child_care_agency",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.7,
+      "userRatingCount": 75,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.jardincarrusel.com/",
+      "phoneNumber": "+598 2622 0229",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJE1E5hfjWoZUR3IpSo6_OT_Q",
+      "name": "School No. 190",
+      "address": "José Aldama y Ortega 5555, 12800 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8703972,
+        "lng": -56.329839199999995
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2312 0014",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJMRUD2ZTVoZUREdsGAzoYndE",
+      "name": "School No. 356 and 226",
+      "address": "4PGH+6XQ, Nueva Guinea, 12800 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8744219,
+        "lng": -56.2700141
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.anep.edu.uy/",
+      "phoneNumber": "+598 2314 3080",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJvQ_whP3VoZURUhRjPuXhQsg",
+      "name": "309 Santa Catalina School",
+      "address": "Cmo. Sta. Catalina 2537, 12800 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8914682,
+        "lng": -56.2922909
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2311 2507",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJLcYZHcbQoZURB0-rEv5QCyw",
+      "name": "Escuela N°159",
+      "address": "Camino Sanguinetti 4195, 12700 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8297763,
+        "lng": -56.3552747
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2312 0025",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ36VTXffVoZURx81KTEETMLg",
+      "name": "Escuela 407",
+      "address": "5PH8+4JH, 12600 Montevideo, Montevideo Department, Uruguay",
+      "location": {
+        "lat": -34.8221949,
+        "lng": -56.283394799999996
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2314 0068",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJb-1DMMHVoZURAvfY6RvXjP8",
+      "name": "Escuela N° 253",
+      "address": "4PHH+9Q2, 12800 Montevideo, Montevideo Department, Uruguay",
+      "location": {
+        "lat": -34.871318699999996,
+        "lng": -56.2706641
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2311 1325",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJN_SufKvWoZURY3RAXpamqz0",
+      "name": "School No. 146 and No. 333",
+      "address": "Av. Luis Batlle Berres 8042, 12600 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8236402,
+        "lng": -56.2981798
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2312 3087",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJv0QYoz7UoZURc5VQFsZoF0M",
+      "name": "School No. 366",
+      "address": "Presbítero Juan José Ortiz 23144908, 12600 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.837921099999996,
+        "lng": -56.2760505
+      },
+      "categories": [
+        "government_office",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://sites.google.com/view/escuela366montevideo/p%C3%A1gina-principal",
+      "phoneNumber": "+598 2314 4908",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJjSq3eKrVoZURAZn6aRd3NVQ",
+      "name": "Escuela N° 383",
+      "address": "4P65+G2P, 12800 Montevideo, Montevideo Department, Uruguay",
+      "location": {
+        "lat": -34.8886695,
+        "lng": -56.2924333
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ2fG2XT_UoZURSEchBts5EDA",
+      "name": "Escuela 242",
+      "address": "Av. Luis Batlle Berres &, 12600 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8342965,
+        "lng": -56.2768198
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJc4wnJUvUoZURPwplkesGB1Y",
+      "name": "School No. 385 Maracana",
+      "address": "4PXJ+WR9, Primera al Nte., 12800 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.850218999999996,
+        "lng": -56.267887099999996
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2313 0016",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ6TME8sPVoZURbDCX6v9mBQw",
+      "name": "School N 372 and No. 373",
+      "address": "Camino Buffa &, 12800 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.869101,
+        "lng": -56.271260999999996
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2315 4950",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJF2zDH0fUoZURW8tJZkFWySU",
+      "name": "School No. 150 and No. 307",
+      "address": "Av. Luis Batlle Berres 6373, 12800 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.838169,
+        "lng": -56.2677425
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://sites.google.com/view/escuelan150/inicio",
+      "phoneNumber": "+598 2312 3446",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJr-D2pT3UoZURGoAbMTmJFHw",
+      "name": "Liceo Nº 24 Carlos Sabat Ercasty",
+      "address": "Presbítero José Nicolás Barrales 2500, 12600 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8372056,
+        "lng": -56.278858199999995
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.dges.edu.uy/contacto/direcciones-y-telefonos/liceo-no-24-carlos-sabat-ercasty",
+      "phoneNumber": "+598 2312 4204",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJL2AuCDfUoZURLGpCI4kB5Sc",
+      "name": "Escuela N° 188 y N° 340",
+      "address": "5P3G+XJ4, Av. Cibils, 12800 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8451083,
+        "lng": -56.273416399999995
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2312 3710",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJbdjaB4vVoZUR56nXkAyhpfw",
+      "name": "School Casabó No. 143",
+      "address": "esquina, Continuación Guinea & Lituania, 4P6J+XR3, 12800 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.887617399999996,
+        "lng": -56.2679483
+      },
+      "categories": [
+        "government_office",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.anep.edu.uy/",
+      "phoneNumber": "+598 2311 1644",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJC6Z9p4vVoZUR2pp3nGC9YEg",
+      "name": "Escuela 143 Bartolomé Hidalgo y 318",
+      "address": "etiopia s/n esquina Senegal, 4P6J+WRX, 12800 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8876335,
+        "lng": -56.267896
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.anep.edu.uy/",
+      "phoneNumber": "+598 2311 1644",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ8ZadjIrVoZURkeZMO2vD5o8",
+      "name": "Escuela 327 Río de la Plata",
+      "address": "4P6J+5P5, 12800 Montevideo, Montevideo Department, Uruguay",
+      "location": {
+        "lat": -34.889617199999996,
+        "lng": -56.2681398
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2315 4948",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ5TZoguLVoZUR9krrcz1HrBk",
+      "name": "Escuela N°375 Tiempo Completo",
+      "address": "4P74+8VJ, 12800 Montevideo, Montevideo Department, Uruguay",
+      "location": {
+        "lat": -34.8866592,
+        "lng": -56.2928553
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2315 5576",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJrYGRszCDoZUROWwnptHcAt8",
+      "name": "Liceo 43",
+      "address": "Cam. O'Higgins, 12700 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.830084899999996,
+        "lng": -56.355074599999995
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2312 0652",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJLUqYqQGAn5URMOTUp7P-JTk",
+      "name": "Maturana school",
+      "address": "Bv. Gral. Artigas 4365, 11800 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8723707,
+        "lng": -56.2008516
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "userRatingCount": 118,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.maturana.edu.uy/",
+      "phoneNumber": "+598 2203 3244",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ4X0KsAtANQARNfhyxfAQkyw",
+      "name": "Technical school Paso de la Arena",
+      "address": "Cam. de las Tropas 2428, 11900 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.843902299999996,
+        "lng": -56.254833999999995
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4,
+      "userRatingCount": 53,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://utupasodelaarena.utu.edu.uy/",
+      "phoneNumber": "+598 2312 3328",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ215fIq8qoJURmZKy283lblw",
+      "name": "Saint Paul School",
+      "address": "Venancio Benavídez 3612, 11700 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8616732,
+        "lng": -56.1947257
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://sanpablo.edu.uy/",
+      "phoneNumber": "+598 2337 3737",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ0S8ZfY6Bn5URfX9usGCIllg",
+      "name": "La Herradura Spanish School Montevideo",
+      "address": "Colonia 2235, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8975313,
+        "lng": -56.1676381
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 5,
+      "userRatingCount": 13,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.spanish-herradura.com/",
+      "phoneNumber": "+598 99 252 781",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJRyXTsrSBn5UR5btC9YEmd3s",
+      "name": "Instituto Universitario ACJ",
+      "address": "Colonia 1870, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9010859,
+        "lng": -56.1764612
+      },
+      "categories": [
+        "university",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 3.8,
+      "userRatingCount": 32,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.iuacj.edu.uy/",
+      "phoneNumber": "+598 2408 9922",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJDReHBvTUoZURYYFMtA7VZS4",
+      "name": "Escuela Madre Paulina",
+      "address": "Carmelo De Arzadum 6023, 12900 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.82833,
+        "lng": -56.2432247
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.colegiomadrepaulina.org/",
+      "phoneNumber": "+598 2309 7077",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJW5W82k_VoZURAiHp8a7NBRE",
+      "name": "Liceo N° 71",
+      "address": "Pablo Zufriategui 972, 11700 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8631209,
+        "lng": -56.2124749
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.liceo71.com/",
+      "phoneNumber": "+598 2308 5130",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJfVl0YgCAn5URNnjeUQ7AyEk",
+      "name": "Highschool N° 16",
+      "address": "Hermanos Gil 1065, 11700 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8703608,
+        "lng": -56.200913299999996
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://liceo16.weebly.com/",
+      "phoneNumber": "+598 2304 3656",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ22av3UqAn5URA3LqTeivobI",
+      "name": "Instituto Preuniversitario Juan XXIII",
+      "address": "Mercedes 1769, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9009012,
+        "lng": -56.179283
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.juan23.edu.uy/",
+      "phoneNumber": "+598 2408 2756",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJp1bQPJsqoJURWJzMQCFR9jo",
+      "name": "PUBLIC SCHOOL No. 53 \"GREAT BRITAIN\"",
+      "address": "León Pérez 3725, 12300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8536616,
+        "lng": -56.1711701
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2216 0687",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJEfh_Q0mAn5UR6AvjHD_FQAM",
+      "name": "Liceo 68",
+      "address": "Dr. Salvador Ferrer Serra 2011, 11800 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8953321,
+        "lng": -56.1753022
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://liceo68.ces.edu.uy/",
+      "phoneNumber": "+598 2400 9002",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJm4P0QeIqoJURmvBKGYoSzN0",
+      "name": "School 168-336 Romania",
+      "address": "Los Angeles 5302, 12300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8233809,
+        "lng": -56.1738812
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2222 4235",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJaznRuhqAn5URpxFxUUe-igQ",
+      "name": "Colegio Uruguay-Pirí",
+      "address": "Gral. Felipe Fraga 2195, 11800 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8849898,
+        "lng": -56.190815799999996
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2203 4339",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJd_7Wb62Bn5URHVqOWln9r1w",
+      "name": "Youth For Understanding",
+      "address": "C. Ana Monterroso de Lavalleja 2085, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.900687,
+        "lng": -56.1696936
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://yfu.org.uy/",
+      "phoneNumber": "+598 2406 5054",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJvRvHP1LVoZURp2lfYg_-JhA",
+      "name": "Liceo Nº 6 Francisco Bauzá",
+      "address": "Av. Lucas Obes 896, 11700 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8631885,
+        "lng": -56.2075584
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://liceo6.weebly.com/",
+      "phoneNumber": "+598 2336 6979",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJn8svdTqAn5URC-u3gy6X7hI",
+      "name": "Sagrada Familia College and Liceo",
+      "address": "Av. Libertador Brig. Gral. Lavalleja 1960, 11800 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8948585,
+        "lng": -56.1886862
+      },
+      "categories": [
+        "secondary_school",
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.safaaguada.edu.uy/",
+      "phoneNumber": "+598 2924 0559",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJzf-1d5sroJURNfCMGNEXq-o",
+      "name": "Liceo 69",
+      "address": "Calle 4 &, 12300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.826892,
+        "lng": -56.1749471
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://liceo69.weebly.com/",
+      "phoneNumber": "+598 2226 0051",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJre1LsgqAn5URzl-KfmVYZ0o",
+      "name": "Escuela N° 68",
+      "address": "Carabela, 11700 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8649637,
+        "lng": -56.1817487
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2209 8852",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJxbJUednUoZUR-QnMUZJL3QY",
+      "name": "Liceo N°23 Hugo Licandro Martínez",
+      "address": "28 de Febrero 1097, 12905 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8311983,
+        "lng": -56.217942199999996
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2358 0375",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJg4w3lc8qoJURZovoI4-xJp0",
+      "name": "Liceo N° 60 Víctor Cayota",
+      "address": "Camino Gral. Máximo Santos &, 12300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.839583999999995,
+        "lng": -56.1933954
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2358 8971",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJC7r4MjGBn5URuHSpCLPqHWU",
+      "name": "Saint George's School",
+      "address": "Donizetti 1353, 11400 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8983743,
+        "lng": -56.1217475
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.saintgeorge.edu.uy/",
+      "phoneNumber": "+598 2613 5338",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJc333pvmGn5URgYyyyRObbhk",
+      "name": "The British Schools of Montevideo",
+      "address": "Gral. Máximo Tajes 6421, 11500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8769984,
+        "lng": -56.071865599999995
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.british.edu.uy/",
+      "phoneNumber": "+598 2600 3421",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJNSmIQVWGn5URp0-5Oy9BO_g",
+      "name": "St. Patrick's College",
+      "address": "Cno. Gigantes 2735, 13000 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.868643999999996,
+        "lng": -56.067573599999996
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://stpatrick.edu.uy/",
+      "phoneNumber": "+598 2601 3474",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJMWYEZPyGn5URmLMrrCSQzlg",
+      "name": "Uruguayan American School",
+      "address": "Av. Dra. María Luisa Saldún de Rodríguez 2375, 11500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8738661,
+        "lng": -56.0780943
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.uas.edu.uy/",
+      "phoneNumber": "+598 2600 7681",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJgc0bKPuGn5URQS3LpwJz26A",
+      "name": "The Anglo School Carrasco",
+      "address": "Av. Dra. María Luisa Saldún de Rodríguez 2195, 11500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8778526,
+        "lng": -56.079534599999995
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.theangloschool.edu.uy/",
+      "phoneNumber": "+598 2600 6452",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJSVvlsOGGn5URXDMqXT1Rw2M",
+      "name": "Harwood School",
+      "address": "4WF6+XHM, Siracusa, 11500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.875031899999996,
+        "lng": -56.0885738
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.harwoodschool.edu.uy/",
+      "phoneNumber": "+598 2601 9360",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJk8DnSlaAn5URT5IiVg3OucQ",
+      "name": "Crandon Institute",
+      "address": "Av. 8 de Octubre 2709, 11600 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8888661,
+        "lng": -56.160441199999994
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.crandon.edu.uy",
+      "phoneNumber": "+598 2487 3375",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJPx7qd_-Gn5URQD3nKwsmjRU",
+      "name": "CEA 183 Nelson Mandela - Carrasco Norte. DGETP - UTU",
+      "address": "entre Havre, Dr Jose F. Arias y, 11500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8748417,
+        "lng": -56.0716384
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "government_office",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://cea183.utu.edu.uy/",
+      "phoneNumber": "+598 98 662 296",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJU02eO3qBn5UR_RVhMFrBZKA",
+      "name": "D’amore Montessori School",
+      "address": "Av.Gral Rivera 4511, 11400 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8928186,
+        "lng": -56.1155439
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.damore.edu.uy/",
+      "phoneNumber": "+598 99 184 380",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJNYg-3qSAn5URSZfRQeW0tG4",
+      "name": "UTU Maroñas",
+      "address": "4VVC+JPG, Andrés Latorre, 12100 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8559357,
+        "lng": -56.128164700000006
+      },
+      "categories": [
+        "university",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4,
+      "userRatingCount": 127,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://utuflorsite.wixsite.com/utuflor",
+      "phoneNumber": "+598 2514 8177",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJpy3czo6An5URRM3cDAR8JEQ",
+      "name": "Liceo No. 64",
+      "address": "3040, Parma 3026, 12000 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8675583,
+        "lng": -56.1526788
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://m.liceo64.webnode.es/",
+      "phoneNumber": "+598 2507 7286",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ7Rv-v8aGn5URVwRIKoSceRQ",
+      "name": "Malvin Experimental School",
+      "address": "Dr. Enrique Estrázulas 1382, 11400 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.892762,
+        "lng": -56.0990664
+      },
+      "categories": [
+        "school",
+        "government_office",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://municipioe.montevideo.gub.uy/node/164",
+      "phoneNumber": "+598 2619 0325",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJGfgV2hmBn5URr3ZY2Bgqjy0",
+      "name": "Espacio Lúdico (Maternal)",
+      "address": "Av. Luis Alberto de Herrera 1489, 11600 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8994255,
+        "lng": -56.140186199999995
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.8,
+      "userRatingCount": 6,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.espacioludicoschool.uy/",
+      "phoneNumber": "+598 2622 5244",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJM2wfNY6An5URryR6wkh-p0Q",
+      "name": "School 89 Ibiray",
+      "address": "4VM2+R8P, Algarrobo, 12000 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8654145,
+        "lng": -56.149174699999996
+      },
+      "categories": [
+        "school",
+        "government_office",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2508 4064",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ79vLbLOHn5URJfb57s3viRo",
+      "name": "Kumon Unidad Malvín",
+      "address": "Local 002, Av. Estanislao López 4877, 11400 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.887663599999996,
+        "lng": -56.1028892
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.9,
+      "userRatingCount": 16,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.kumon.com.uy/unidad/malvin",
+      "phoneNumber": "+598 2614 4111",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJs-Jp8wYqoJURurwg-9VO8nc",
+      "name": "School No. 182 Egypt",
+      "address": "Cno. Maldonado 5768, 13000 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8413489,
+        "lng": -56.1225411
+      },
+      "categories": [
+        "school",
+        "government_office",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2513 1577",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJC0BIAtCGn5URnLZvYUuIr-o",
+      "name": "Liceo N° 33",
+      "address": "Ana María Rubens 2324, Cno. Carrasco Esquina, 11400 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8715093,
+        "lng": -56.1044346
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://liceo33montevideo.wixsite.com/liceo33montevideo",
+      "phoneNumber": "+598 2525 4612",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ194b1vmAn5UR7GzhpU3iin0",
+      "name": "Colegio Marista Santa María",
+      "address": "Av. 8 de Octubre 2966, 11600 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8850327,
+        "lng": -56.1555554
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.maristas.edu.uy/",
+      "phoneNumber": "+598 2487 2212",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJvxfqAO6Gn5URB9zHuVk98v8",
+      "name": "Andres Bello School 130",
+      "address": "4W79+QH9, 11500 Montevideo, Montevideo Department, Uruguay",
+      "location": {
+        "lat": -34.885588,
+        "lng": -56.0810114
+      },
+      "categories": [
+        "school",
+        "government_office",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2600 2766",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJo5l3VwEqoJURonxPD7LSF0c",
+      "name": "Liceo N°58 Mario Benedetti",
+      "address": "Cno. Maldonado 5870, 12200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8393015,
+        "lng": -56.1191889
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://liceo58benedetti.blogspot.com/",
+      "phoneNumber": "+598 2511 5617",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ-03tIl6Gn5URBLzzVS-UX1c",
+      "name": "Woodlands School",
+      "address": "Av. San Carlos de Bolivar s/n, 11500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8852419,
+        "lng": -56.0655928
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.woodlands.edu.uy/esp/",
+      "phoneNumber": "+598 2604 2714",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ1YLUaDiGn5URNHloPdidE1M",
+      "name": "Scuola Italiana di Montevideo",
+      "address": "Gral. French 2380, 11500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8716157,
+        "lng": -56.0480324
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.7,
+      "userRatingCount": 93,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.scuolaitaliana.edu.uy/",
+      "phoneNumber": "+598 2600 1527",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJUcJRZLqJn5UR48xCeojCnxE",
+      "name": "Academia de Choferes LOMAS",
+      "address": "Manzana 70 Solar 6, Real de Azua, 15800 Ciudad de la Costa, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.822781,
+        "lng": -55.968365000000006
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.9,
+      "userRatingCount": 840,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.academialomas.com.uy/",
+      "phoneNumber": "+598 2695 7134",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJC9B15VOIn5URamviVvRUlLg",
+      "name": "Master School",
+      "address": "Garcia Arocena M40 S30, 15000 Ciudad de la Costa, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.835164,
+        "lng": -55.98536
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://masterschool.edu.uy/",
+      "phoneNumber": "+598 2682 4078",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJNScekvuIn5URggSQ4SnOGdI",
+      "name": "San Jose's Greenland School",
+      "address": "4002 Bushchental M.40 S.1 esq. Zorrilla de San Martín, 15000 Ciudad de la Costa, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.8479001,
+        "lng": -55.986563499999995
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.greenlandschool.edu.uy/",
+      "phoneNumber": "+598 2682 5514",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJX4WYAF2Gn5URFOatgBO7QEg",
+      "name": "Liceo No. 15 Ibiray",
+      "address": "4W9Q+5H6, Av. Alfredo Arocena, 11500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.88208,
+        "lng": -56.0610961
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://libiray.webnode.es/",
+      "phoneNumber": "+598 2600 5917",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJl5I5-TiBn5URJ54bSp2wud4",
+      "name": "Escuela de Experimentos",
+      "address": "Nicaragua M23 S24, 15000 Ciudad de la Costa, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.8507324,
+        "lng": -56.002013
+      },
+      "categories": [
+        "school",
+        "event_venue",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "userRatingCount": 11,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.escueladeexperimentos.com/",
+      "phoneNumber": "+598 99 446 364",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJBRToNUeGn5URylfhJLRYnWE",
+      "name": "My Kinder",
+      "address": "Gral. Máximo Tajes 7268, 11500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.875327299999995,
+        "lng": -56.048793599999996
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.9,
+      "userRatingCount": 17,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 97 995 789",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJqfh471SIn5URo-RzUJW8ZMM",
+      "name": "Colegio Del Lago - Hab. N 77",
+      "address": "Las Canoas casi Becu M.33 S.5, 15000 Ciudad de la Costa, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.8367418,
+        "lng": -55.9822863
+      },
+      "categories": [
+        "preschool",
+        "school",
+        "child_care_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2683 1424",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJnclIOv2In5URGSzD0ptwQu8",
+      "name": "Centro educativo Vaz Ferreira",
+      "address": "Av. Gral. Jose Artigas M.43 S.9, 15000 Ciudad de la Costa, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.8475404,
+        "lng": -55.9841645
+      },
+      "categories": [
+        "preschool",
+        "school",
+        "child_care_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.9,
+      "userRatingCount": 8,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://vaz.edu.uy/",
+      "phoneNumber": "+598 2683 1704",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJh_mJNOSIn5URFyCfxf5lydE",
+      "name": "Col. Santa Elena - Sede Costa de Oro",
+      "address": "Rambla Costanera km. 21.500, Rbla. Costanera, 15000 Ciudad de la Costa, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.8475761,
+        "lng": -55.9771308
+      },
+      "categories": [
+        "preschool",
+        "school",
+        "child_care_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.santaelena.edu.uy/",
+      "phoneNumber": "+598 2682 3007",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJgW-8dKqJn5URwounCMC44FA",
+      "name": "Clases de italiano en Ciudad de la Costa",
+      "address": "Av Calcagno 513, 15001 Ciudad de la Costa, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.848586499999996,
+        "lng": -56.002070800000006
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 5,
+      "userRatingCount": 1,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.cysescribanos.uy/",
+      "phoneNumber": "+598 92 543 080",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ_dqWUT6Gn5URxSKTn9Ke4Yo",
+      "name": "Escuela 175 Comandante Pedro Campbell",
+      "address": "Lido 1992, 11500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8769756,
+        "lng": -56.0440921
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.anep.edu.uy/portalmonitor/servlet/consultaescuelanew?1101175",
+      "phoneNumber": "+598 2600 1223",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJq9GAg1aIn5URSIvMcA8JMP8",
+      "name": "Colegio del Este",
+      "address": "Manuel Nelson Varela Cáceres Mz 123 S21, 15000 Ciudad de la Costa, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.83816910000001,
+        "lng": -55.9864245
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.instagram.com/colegio_deleste/",
+      "phoneNumber": "+598 2695 5480",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJb5uS9JKIn5URYKPxciWkDoA",
+      "name": "Liceo de Shangrilá",
+      "address": "4XRV+MWJ, 15000 Ciudad de la Costa, Canelones Department, Uruguay",
+      "location": {
+        "lat": -34.858291799999996,
+        "lng": -56.005243099999994
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://liceo-de-shangrila.blogspot.com.uy/",
+      "phoneNumber": "+598 2682 7377",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJqRCQwgGJn5UR_LxbN-xIC8A",
+      "name": "Colegio Lagomar",
+      "address": "Río Danubio, 15000 Ciudad de la Costa, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.8428344,
+        "lng": -55.979755399999995
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://colegiolagomar.edu.uy/web/",
+      "phoneNumber": "+598 2682 2736",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ1YypWMqHn5URp7c2fTuFP6s",
+      "name": "Escuela N°230",
+      "address": "4XW7+J42 parque roosevelt, Av. La Playa, 15000 Ciudad de la Costa, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.8534984,
+        "lng": -56.0372425
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2601 1882",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ8xwhwkyGn5URM-_oX2rSpK4",
+      "name": "Colegio Sagrado Corazón Paso Carrasco",
+      "address": "No.10,, Dr. Horacio García Lagos, 15000 Ciudad de la Costa, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.863633799999995,
+        "lng": -56.054776399999994
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://sagrado.edu.uy/",
+      "phoneNumber": "+598 2601 1299",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJI_leHqmJn5UR2uMOPai-vtg",
+      "name": "Solymar Liceo No. 1",
+      "address": "528H+P4R, Mar de Ajó, 15800 Ciudad de la Costa, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.833139599999996,
+        "lng": -55.9722349
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.liceosolymar1.edupage.org/",
+      "phoneNumber": "+598 2695 8716",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJa0tGYUqIn5UR_dJdpy26sic",
+      "name": "Liceo N°2 Solymar (Norte)",
+      "address": "52H8+7JW, 15800 Ciudad de la Costa, Canelones Department, Uruguay",
+      "location": {
+        "lat": -34.8217504,
+        "lng": -55.983425999999994
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2696 3941",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJlSYMdAzUoZURU0kGzLULfLI",
+      "name": "Caif del Padre Hurtado",
+      "address": "5PJG+566, 12600 Montevideo, Montevideo Department, Uruguay",
+      "location": {
+        "lat": -34.8195994,
+        "lng": -56.2744892
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 99 245 350",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJhR3rugXOoZUR8GG-PEjQ65w",
+      "name": "Liceo N° 44",
+      "address": "Complejo Fútbol 11, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.765365599999996,
+        "lng": -56.3006543
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://liceo44.webnode.es/nosotros/",
+      "phoneNumber": "+598 2323 4609",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJfX-pGg_SoZUROEchKb4U4wY",
+      "name": "Escuela 155",
+      "address": "Cno. Melilla 8191, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.7614204,
+        "lng": -56.2709025
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 92 969 254",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJxSQmsI7RoZURqS9sxpR-SXM",
+      "name": "Escuela numero 124",
+      "address": "Cno. de la Redención 1000, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.765253799999996,
+        "lng": -56.300075299999996
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2322 8658",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJG9xF0FrQoZURC8OpStimQIo",
+      "name": "Espacio Libre 1291",
+      "address": "Santiago Vázquez, Montevideo, Calle Silvestre Ochoa, esquina, 6J6X+3H3, Guazunambi, 12600 Santiago Vázquez, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.789866599999996,
+        "lng": -56.3510645
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 5,
+      "userRatingCount": 1,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2312 0115",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJrT8BfADToZURxQezpk-yuXo",
+      "name": "Gradu Zorrilla 2024",
+      "address": "Cno. de la Redención 6606, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8014185,
+        "lng": -56.2640873
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.instagram.com/graduzorri24?igsh=NHU2bXVsbDNiZnlz",
+      "phoneNumber": "+598 94 201 891",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ8wOaEjQroJURDjQra5j-u2Y",
+      "name": "Granja Agustina",
+      "address": "5RP2+584, Cam. Jose Duran, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8146062,
+        "lng": -56.1991732
+      },
+      "categories": [
+        "farm",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "userRatingCount": 129,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2320 0168",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJrX-d1qLUoZURHGw5rvnLzBw",
+      "name": "IDAP",
+      "address": "Carve 5652, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.80788,
+        "lng": -56.223316
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.4,
+      "userRatingCount": 81,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.idap.edu.uy/",
+      "phoneNumber": "+598 2320 1023",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJCekhxTXToZURQKyLhenk9fA",
+      "name": "Altos del Charabón",
+      "address": "Camino La Paz a Mendoza 5431, 12400 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.7724635,
+        "lng": -56.208329199999994
+      },
+      "categories": [
+        "farm",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "userRatingCount": 120,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.facebook.com/altosdelcharabon.granjadidactica?fref=ts",
+      "phoneNumber": "+598 99 155 894",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJRzm_WJ7UoZURstkKpLBr7JY",
+      "name": "Jardín 286",
+      "address": "5QXC+J48, Andrés, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.800965,
+        "lng": -56.229681299999996
+      },
+      "categories": [
+        "preschool",
+        "child_care_agency",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 3.6,
+      "userRatingCount": 13,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2320 1039",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ0eDZTZ3ToZURW6F3kOKCw6I",
+      "name": "Colegio Pío IX - Salesianos",
+      "address": "Av. Lezica 6375, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.796011,
+        "lng": -56.2491347
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.6,
+      "userRatingCount": 199,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.colegiopio.edu.uy/",
+      "phoneNumber": "+598 2322 8077",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJaVPe357UoZURhc9C0AmLUhw",
+      "name": "Lyceum No. 9 Institute Dr. Eduardo Acevedo",
+      "address": "Av. Lezica 5831, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8039147,
+        "lng": -56.229055499999994
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2320 0381",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJKwpCrmfToZURi3KAFCI2hfo",
+      "name": "Public School 289 N.",
+      "address": "6Q5C+5MG, Cno. Carlos A. López, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.7920684,
+        "lng": -56.22828570000001
+      },
+      "categories": [
+        "government_office",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.anep.edu.uy/",
+      "phoneNumber": "+598 2320 0194",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJb8phd5bUoZURhRZ3nkcimhA",
+      "name": "CAIF Abracitos",
+      "address": "5QPC+7RR, Pje Jose Luis Panizza, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8142572,
+        "lng": -56.2279998
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.9,
+      "userRatingCount": 15,
+      "businessStatus": "OPERATIONAL",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJqROwVb_UoZURgqs1ypMe2FQ",
+      "name": "Ceadi ( Centro Educativo De Atencion Al desarrollo Integral)",
+      "address": "Av. Gral. Eugenio Garzón 1549, 12900 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8169798,
+        "lng": -56.2205175
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.7,
+      "userRatingCount": 3,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2321 0407",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJsy2xQJ_UoZURlowxh2pQUi0",
+      "name": "Liceo CIEI",
+      "address": "Av. Lezica 5794, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8033332,
+        "lng": -56.226955399999994
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://liceociei.edu.uy/",
+      "phoneNumber": "+598 2320 9078",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJmSI5_qHUoZURDkSOoYiPtVQ",
+      "name": "Escuelas Nº 50 Juan Manuel Blanes y Nº 185 UNESCO",
+      "address": "Av. Lezica 5722, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.803894299999996,
+        "lng": -56.2250558
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2320 0434",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJMaCVCh3ToZURXwBOo3RizlM",
+      "name": "Liceo No. 1 \"Javier de Viana\" La Paz",
+      "address": "6QP8+95Q, Manuel Tiscornia, 15900 La Paz, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.764038299999996,
+        "lng": -56.234522
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://liceo-n1-javier-de-viana---la-paz.webnode.es/",
+      "phoneNumber": "+598 2362 2213",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJq6qqqp7ToZURhhpBBveqiVY",
+      "name": "Montalvo School 145",
+      "address": "Montalvo 6289, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.800375599999995,
+        "lng": -56.2497432
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2322 8652",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJf81I-qHUoZUR72m8Z3CeT7o",
+      "name": "Escuela N° 208",
+      "address": "Carnot 5735, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8031461,
+        "lng": -56.224989099999995
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2320 9754",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJo-WZmODSoZURTwBh30-D33Q",
+      "name": "Escuela 191",
+      "address": "6QVF+9FM, 15900 La Paz, Canelones Department, Uruguay",
+      "location": {
+        "lat": -34.7565364,
+        "lng": -56.226335199999994
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2362 6442",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJq9m2ONfVoZUReyu7GHoFG8c",
+      "name": "Liceo N° 62",
+      "address": "Av. Lezica 5791, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8037971,
+        "lng": -56.227645499999994
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2321 0058",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ59NHBJjToZUR5hxRhU4Eq9c",
+      "name": "Integral Neighborhood Center Dalmanutha",
+      "address": "Cno. Melilla 6676, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.790486699999995,
+        "lng": -56.2583311
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.7,
+      "userRatingCount": 56,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2322 9633",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJOU2YDQzVoZURia2fcLFaM6A",
+      "name": "Escuela pública 128",
+      "address": "Antonio María Márquez 5426, 12900 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8192948,
+        "lng": -56.225463
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJD0vRUGfToZURRIlQ9yhz6Ys",
+      "name": "Cecap La Paz",
+      "address": "Pedro Rosa Giffuni 328, 12400 La Paz, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.7618086,
+        "lng": -56.2257075
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.8,
+      "userRatingCount": 4,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 99 197 852",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJk-BryrzUoZURMi3K2Y8bS1E",
+      "name": "San jose school",
+      "address": "Av. Gral. Eugenio Garzón 1867, 12500 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8077876,
+        "lng": -56.2217677
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://sanjosecolon.edu.uy/",
+      "phoneNumber": "+598 2323 8850",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJy6mTt0kpoJURdRSNManhDSE",
+      "name": "Holberton Uruguay",
+      "address": "Cam. de los Olivos, 12200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.7890501,
+        "lng": -56.0785493
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.8,
+      "userRatingCount": 17,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://www.holbertonschool.uy/",
+      "phoneNumber": "+598 2517 0086",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJuQG0_jYqoJURBllWjwzp5qM",
+      "name": "Caif \"Los Fueguitos\"",
+      "address": "Clemente Ruggia 4716, 12200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8185782,
+        "lng": -56.134949000000006
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.9,
+      "userRatingCount": 20,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2226 0013",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJzfr6mU4qoJURj7xeyn6P1NA",
+      "name": "Domingo Arena Technical School",
+      "address": "5VJ4+RCW, 12300 Montevideo, Montevideo Department, Uruguay",
+      "location": {
+        "lat": -34.8178793,
+        "lng": -56.143924999999996
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "userRatingCount": 138,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://domingoarena.utu.edu.uy/",
+      "phoneNumber": "+598 2222 3094",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ2ZSC_SopoJURDckclp9HPbQ",
+      "name": "School Casarino",
+      "address": "7W2J+8P4, 84, 15700 Casarino, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.749247800000006,
+        "lng": -56.0681757
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "government_office",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://escuelan170casarino.blogspot.com.uy/?m=1",
+      "phoneNumber": "+598 2296 8630",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ2zJMeUUvoJURuVlAspCCdjw",
+      "name": "Academia Clama🎓",
+      "address": "Dac, 15700 Toledo, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.7426379,
+        "lng": -56.098227699999995
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.9,
+      "userRatingCount": 10,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://instagram.com/clama6997?igshid=MDM4ZDc5MmU=",
+      "phoneNumber": "+598 96 609 916",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJpwKP25QroJURebX_XWDBp48",
+      "name": "Liceo N° 48",
+      "address": "José Baltar 4143, 12300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.788193,
+        "lng": -56.1375618
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.dges.edu.uy/",
+      "phoneNumber": "+598 2227 4221",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJrSLVTiMpoJURV0KKL1zRSv4",
+      "name": "C.E.I.A Centro de Educación Integral Andaluz",
+      "address": "Camino al Paso del Andaluz km 1.200, 91100 Toledo, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.7690185,
+        "lng": -56.080202199999995
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 99 050 044",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJM3B0GfEroJUR1KYkPabcywo",
+      "name": "Liceo Espigas",
+      "address": "12200 Montevideo, Montevideo Department, Uruguay",
+      "location": {
+        "lat": -34.77507,
+        "lng": -56.128696999999995
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.liceoespigas.edu.uy/",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJvcH-TfAroJUR0hWJRqw82Sg",
+      "name": "Mercadito Talo-Tito",
+      "address": "12300 Montevideo, Montevideo Department, Uruguay",
+      "location": {
+        "lat": -34.806051,
+        "lng": -56.141460099999996
+      },
+      "categories": [
+        "grocery_store",
+        "school",
+        "food_store",
+        "food",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "rating": 4.8,
+      "userRatingCount": 20,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2227 3345",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJd7Mqa6IroJUR16z93O688lI",
+      "name": "CEA 230",
+      "address": "6V69+X3M, Bernardo Berro, 12400 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.7875484,
+        "lng": -56.1323333
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://sites.google.com/view/utu-puntas-de-manga/p%C3%A1gina-principal",
+      "phoneNumber": "+598 2511 8895",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJMcdvJMEuoJURzZRtuGPsVYs",
+      "name": "Instituto de Enseñanza Secundaria Nº 1 de Toledo",
+      "address": "7W56+QGV, Melo, 15700 Toledo, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.740505999999996,
+        "lng": -56.0887099
+      },
+      "categories": [
+        "secondary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2296 9337",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJO6kyAtMpoJURDA3Adf_EX7g",
+      "name": "Escuela 403 Tiempo completo - Villa Don Bosco",
+      "address": "Prof. Dr. Justo M. A. González, 12100 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.7989192,
+        "lng": -56.0789307
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2513 9792",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJWYoWDmYqoJUR1QO0IRE6vpk",
+      "name": "Escuela 141",
+      "address": "5RXQ+52F, Av. Don Pedro de Mendoza, 12300 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8020673,
+        "lng": -56.1624621
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2222 5787",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJR5RmMCwroJURrJ8EBuFKoDY",
+      "name": "Jardín 401",
+      "address": "Cno. Paso de la Española 5630, 13000 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8006819,
+        "lng": -56.1234692
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 5,
+      "userRatingCount": 7,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2227 5645",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ3fQkqCoqoJURQc764R33Lvc",
+      "name": "Initial Education Center Tortuguita",
+      "address": "5VWP+F68, Cam. Abrevadero Bo. Capra, 12200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8038342,
+        "lng": -56.1144306
+      },
+      "categories": [
+        "preschool",
+        "school",
+        "child_care_agency",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.8,
+      "userRatingCount": 10,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2220 2237",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJE2TJOaIvoJURP5cwK78kkxI",
+      "name": "Escuela Militar de la República Oriental del Uruguay",
+      "address": "15700 Toledo, Canelones Department, Uruguay",
+      "location": {
+        "lat": -34.7413593,
+        "lng": -56.095706899999996
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.escuelamilitar.edu.uy/",
+      "phoneNumber": "+598 2296 9911",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ70jhfMsroJURXSEN2pJYTD0",
+      "name": "escuela eduardo fabbini",
+      "address": "Av. De La Aljaba 1632, 12200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8059374,
+        "lng": -56.131606899999994
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2222 3129",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJ79fX70oqoJURCFMuCGB5TnU",
+      "name": "Liceo Reina Reyes",
+      "address": "Av. José Belloni 5011, 12200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.81265030000001,
+        "lng": -56.138591
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://reinareyes.edu.uy/",
+      "phoneNumber": "+598 2222 7056",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJgxcMnMguoJURwmGjA6wFQho",
+      "name": "CECAP",
+      "address": "7W36+CQM, M. Maestre, 15700 Toledo, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.7464119,
+        "lng": -56.0880717
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 5,
+      "userRatingCount": 1,
+      "businessStatus": "OPERATIONAL",
+      "phoneNumber": "+598 2296 8696",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJM8Ayz6UpoJURDsXu6K0jl5Q",
+      "name": "Liceo Nº 25 José Belloni",
+      "address": "Ruta 8 7927, 12200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.7984443,
+        "lng": -56.0825098
+      },
+      "categories": [
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://liceo252019.wixsite.com/liceo25",
+      "phoneNumber": "+598 2222 1044",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJyWbu4p2Jn5UR-8m36OUvu1M",
+      "name": "North Schools",
+      "address": "Ruta Interbalnearia Gral. Líber Seregni &, 15800 Ciudad de la Costa, Departamento de Canelones, Uruguay",
+      "location": {
+        "lat": -34.8143463,
+        "lng": -55.974235500000006
+      },
+      "categories": [
+        "primary_school",
+        "school",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://northschools.uy/",
+      "phoneNumber": "+598 94 251 656",
+      "type": "restricted",
+      "restrictedCategory": "school"
+    },
+    {
+      "id": "ChIJQ2e3ALuBn5URLURaa_kn2PE",
+      "name": "Centro Izcali",
+      "address": "Juan D. Jackson 901, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9127504,
+        "lng": -56.172575599999995
+      },
+      "categories": [
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.2,
+      "userRatingCount": 18,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://izcali.com.uy/",
+      "phoneNumber": "+598 98 575 210",
+      "type": "restricted",
+      "restrictedCategory": "rehab_center"
+    },
+    {
+      "id": "ChIJc12zkbGBn5URgkaOgBw32RU",
+      "name": "Centro Aconcagua Guaná",
+      "address": "Guaná 2019, 11200 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.9051746,
+        "lng": -56.1717211
+      },
+      "categories": [
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 3.5,
+      "userRatingCount": 24,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.centroaconcagua.com/",
+      "phoneNumber": "+598 2403 5692",
+      "type": "restricted",
+      "restrictedCategory": "rehab_center"
+    },
+    {
+      "id": "ChIJ802EQqKBn5UR25PEH006h0E",
+      "name": "Reencuentro Apoyo al adicto",
+      "address": "Enriqueta Compte y Riqué 1295, 11800 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.8842035,
+        "lng": -56.189515500000006
+      },
+      "categories": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://www.mediocamino.uy/",
+      "phoneNumber": "+598 93 484 557",
+      "type": "restricted",
+      "restrictedCategory": "rehab_center"
+    },
+    {
+      "id": "ChIJM-wkY2KGn5URwKk26_kLxfQ",
+      "name": "Casa de Gardel (Centro De Rehabilitación)",
+      "address": "Pablo Podestá 1421, 11400 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.893870199999995,
+        "lng": -56.068991
+      },
+      "categories": [
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.5,
+      "userRatingCount": 34,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "https://sites.google.com/view/reumatologiauruguay/inicio",
+      "phoneNumber": "+598 2604 4278",
+      "type": "restricted",
+      "restrictedCategory": "rehab_center"
+    },
+    {
+      "id": "ChIJRxLvI_croJURwLs96DMheOk",
+      "name": "Fundación Manantiales Uruguay",
+      "address": "Av. de las Instrucciones 4601, 12400 Montevideo, Departamento de Montevideo, Uruguay",
+      "location": {
+        "lat": -34.772974,
+        "lng": -56.1281171
+      },
+      "categories": [
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "rating": 4.3,
+      "userRatingCount": 16,
+      "businessStatus": "OPERATIONAL",
+      "websiteUri": "http://manantiales.org.uy/",
+      "phoneNumber": "+598 2400 3400",
+      "type": "restricted",
+      "restrictedCategory": "rehab_center"
+    }
+  ],
+  "meta": {
+    "bounds": {
+      "north": -34.739403988501614,
+      "south": -35.062796011498385,
+      "east": -55.96734361722285,
+      "west": -56.36165638277714
+    },
+    "radiusMeters": 18000,
+    "cannabisCategories": [
+      "grow_shop",
+      "dispensary",
+      "medical",
+      "headshop",
+      "event",
+      "other"
+    ],
+    "restrictedCategories": [
+      "school",
+      "cultural_center",
+      "rehab_center"
+    ]
+  }
+}
