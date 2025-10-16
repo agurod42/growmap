@@ -28,7 +28,7 @@ export const filterSchema = z.object({
   cityId: z.enum(supportedCityIdsEnum),
   cannabisCategories: z.array(cannabisEnum),
   restrictedCategories: z.array(restrictedEnum),
-  showClubEnabledAreas: z.boolean()
+  clubZoneMode: z.enum(["off", "enabled", "restricted"])
 });
 
 export const defaultFilterState: MapFilterState = createDefaultFiltersForCity(defaultCityId);

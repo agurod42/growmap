@@ -34,7 +34,7 @@ export function buildSafeZoneCache(
       return categories.includes(place.restrictedCategory);
     });
 
-    const zones = computeSafeZones(filteredPlaces, {
+    const { enabledZones, restrictedPolygons } = computeSafeZones(filteredPlaces, {
       cityId,
       bufferDistanceMeters
     });
@@ -42,10 +42,13 @@ export function buildSafeZoneCache(
     return {
       key: safeZoneCacheKey(categories),
       categories,
-      zones,
+      enabledZones,
+      restrictedPolygons,
       meta: {
         bufferDistanceMeters,
-        restrictedPlaceCount: filteredPlaces.length
+        restrictedPlaceCount: filteredPlaces.length,
+        enabledZoneCount: enabledZones.length,
+        restrictedZoneCount: restrictedPolygons.length
       }
     };
   });

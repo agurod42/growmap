@@ -35,7 +35,13 @@ export async function GET(req: Request) {
     );
   }
 
-  const variants = cache.safeZoneCache ?? buildSafeZoneCache(cityId, cache.restricted);
+  const cachedVariants = cache.safeZoneCache;
+  const hasUpdatedCache = Array.isArray(cachedVariants)
+    && cachedVariants.every((entry) => entry && "enabledZones" in entry && "restrictedPolygons" in entry);
+
+  const variants = hasUpdatedCache
+    ? (cachedVariants as ReturnType<typeof buildSafeZoneCache>)
+    : buildSafeZoneCache(cityId, cache.restricted);
 
   return NextResponse.json({
     variants,

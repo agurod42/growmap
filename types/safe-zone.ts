@@ -12,10 +12,13 @@ export type SafeZone = {
 export type SafeZoneCacheEntry = {
   key: string;
   categories: RestrictedCategory[];
-  zones: SafeZone[];
+  enabledZones: SafeZone[];
+  restrictedPolygons: LatLngLiteral[][][];
   meta: {
     bufferDistanceMeters: number;
     restrictedPlaceCount: number;
+    enabledZoneCount: number;
+    restrictedZoneCount: number;
   };
 };
 

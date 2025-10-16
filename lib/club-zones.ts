@@ -31,7 +31,10 @@ export function computeSafeZones(
   const { cityId, bufferDistanceMeters } = options;
   const land = getLandMultiPolygon(cityId);
   if (land.length === 0) {
-    return [];
+    return {
+      enabledZones: [],
+      restrictedPolygons: []
+    };
   }
 
   const relevantPlaces = restrictedPlaces.filter((place) =>
@@ -39,6 +42,7 @@ export function computeSafeZones(
   );
 
   let allowed: MultiPolygon | null = land;
+  let restrictedMulti: MultiPolygon | null = null;
 
   if (relevantPlaces.length > 0) {
     const bufferPolygons: Polygon[] = relevantPlaces
@@ -49,13 +53,22 @@ export function computeSafeZones(
     allowed = mergedBuffers
       ? (polygonClipping.difference(land, mergedBuffers) as MultiPolygon | null)
       : land;
+    restrictedMulti = mergedBuffers
+      ? (polygonClipping.intersection(land, mergedBuffers) as MultiPolygon | null)
+      : null;
   }
 
-  if (!allowed || allowed.length === 0) {
-    return [];
-  }
+  const enabledZones = allowed && allowed.length > 0
+    ? convertToSafeZones(allowed, relevantPlaces)
+    : [];
+  const restrictedPolygons = restrictedMulti && restrictedMulti.length > 0
+    ? filterRestrictedPolygons(multiPolygonToLatLng(restrictedMulti))
+    : [];
 
-  return convertToSafeZones(allowed, relevantPlaces);
+  return {
+    enabledZones,
+    restrictedPolygons
+  };
 }
 
 function createBufferPolygon(center: LatLngLiteral, radiusMeters: number, segments = DEFAULT_BUFFER_SEGMENTS) {
@@ -134,6 +147,16 @@ function convertToSafeZones(polygons: MultiPolygon, restrictedPlaces: PlaceFeatu
   });
 
   return safeZones;
+}
+
+function filterRestrictedPolygons(polygons: LatLngLiteral[][][]) {
+  return polygons.filter((polygon) => {
+    if (polygon.length === 0) return false;
+    const outer = polygon[0];
+    if (outer.length < 4) return false;
+    const areaOuter = ringAreaSquareMeters(outer);
+    return areaOuter >= MIN_SAFE_ZONE_AREA_SQ_METERS;
+  });
 }
 
 function computePolygonCentroid(ring: LatLngLiteral[]) {

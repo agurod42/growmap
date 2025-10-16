@@ -7,7 +7,9 @@ import {
   AutocompleteItem,
   Button,
   Checkbox,
-  CheckboxGroup
+  CheckboxGroup,
+  Radio,
+  RadioGroup
 } from "@heroui/react";
 import { useMemo } from "react";
 
@@ -63,10 +65,11 @@ export function FilterSidebar({ value, onChange, onReset }: FilterSidebarProps) 
     });
   };
 
-  const handleClubToggle = (checked: boolean) => {
+  const handleClubModeChange = (mode: string) => {
+    if (mode !== "off" && mode !== "enabled" && mode !== "restricted") return;
     onChange({
       ...value,
-      showClubEnabledAreas: checked
+      clubZoneMode: mode
     });
   };
 
@@ -121,15 +124,17 @@ export function FilterSidebar({ value, onChange, onReset }: FilterSidebarProps) 
             ))}
           </CheckboxGroup>
         </AccordionItem>
-        <AccordionItem key="zones" aria-label="Club Zones" title="Club Enabled Areas">
+        <AccordionItem key="zones" aria-label="Club Zones" title="Club Zones">
           <div className="flex flex-col gap-4">
-            <Checkbox
-              isSelected={value.showClubEnabledAreas}
-              onValueChange={handleClubToggle}
-              className="max-w-fit"
+            <RadioGroup
+              size="sm"
+              value={value.clubZoneMode}
+              onValueChange={handleClubModeChange}
             >
-              Highlight eligible areas
-            </Checkbox>
+              <Radio value="off">Hide club zones</Radio>
+              <Radio value="enabled">Show club-enabled zones</Radio>
+              <Radio value="restricted">Show club-restricted zones</Radio>
+            </RadioGroup>
           </div>
         </AccordionItem>
       </Accordion>

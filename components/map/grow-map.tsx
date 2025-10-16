@@ -180,6 +180,25 @@ const SafeZonePolygon = memo(function SafeZonePolygon({
   );
 });
 
+const RestrictedZonePolygon = memo(function RestrictedZonePolygon({
+  paths
+}: {
+  paths: LatLngLiteral[][];
+}) {
+  return (
+    <PolygonF
+      paths={paths}
+      options={{
+        fillColor: "#ef4444",
+        fillOpacity: 0.25,
+        strokeColor: "#b91c1c",
+        strokeOpacity: 0.5,
+        strokeWeight: 1
+      }}
+    />
+  );
+});
+
 export default function GrowMap({ filters }: GrowMapProps) {
   const [center, setCenter] = useState(DEFAULT_CENTER);
   const initialBounds = useMemo(
@@ -293,10 +312,14 @@ export default function GrowMap({ filters }: GrowMapProps) {
     }
   );
 
+  const showClubZones = filters.clubZoneMode !== "off";
+  const showEnabledZones = filters.clubZoneMode === "enabled";
+  const showRestrictedZones = filters.clubZoneMode === "restricted";
+
   const safeZonesKey = useMemo(() => {
-    if (!filters.showClubEnabledAreas) return null;
+    if (!showClubZones) return null;
     return `/api/safe-zones?city=${filters.cityId}`;
-  }, [filters.cityId, filters.showClubEnabledAreas]);
+  }, [filters.cityId, showClubZones]);
 
   const {
     data: safeZoneData,
@@ -357,12 +380,12 @@ export default function GrowMap({ filters }: GrowMapProps) {
 
   const restrictedFeatures = useMemo(() => {
     if (!mapBounds) return [];
-    if (!filters.showClubEnabledAreas) return [];
+    if (!showClubZones) return [];
     if (mapZoom < SAFE_ZONE_ZOOM_THRESHOLD) return [];
     return filteredRestrictedByCategory.filter((feature) =>
       isWithinViewBounds(feature.location, mapBounds)
     );
-  }, [filteredRestrictedByCategory, filters.showClubEnabledAreas, mapBounds, mapZoom]);
+  }, [filteredRestrictedByCategory, showClubZones, mapBounds, mapZoom]);
 
   const visibleRestrictedFeatures = useMemo(() => {
     if (restrictedFeatures.length <= MARKER_RENDER_LIMIT) {
@@ -387,17 +410,19 @@ export default function GrowMap({ filters }: GrowMapProps) {
 
   const safeZoneVariant = useMemo(() => {
     if (!safeZoneData) return null;
-    if (!filters.showClubEnabledAreas) return null;
+    if (!showClubZones) return null;
     const key = safeZoneCacheKey(filters.restrictedCategories);
     return (
       safeZoneData.variants.find((entry) => entry.key === key) ?? safeZoneData.variants[0] ?? null
     );
-  }, [filters.restrictedCategories, filters.showClubEnabledAreas, safeZoneData]);
+  }, [filters.restrictedCategories, showClubZones, safeZoneData]);
 
-const safeZones = useMemo(() => {
-  if (!filters.showClubEnabledAreas) return [];
-  return safeZoneVariant?.zones ?? [];
-}, [filters.showClubEnabledAreas, safeZoneVariant?.zones]);
+  const enabledZones = showEnabledZones ? safeZoneVariant?.enabledZones ?? [] : [];
+  const restrictedZonePolygons = showRestrictedZones
+    ? safeZoneVariant?.restrictedPolygons ?? []
+    : [];
+
+  const safeZones = enabledZones;
 
   const categoryCount = useMemo(() => aggregateByCategory(cannabisFeatures), [cannabisFeatures]);
 
@@ -409,8 +434,19 @@ const safeZones = useMemo(() => {
     0,
     restrictedFeatures.length - visibleRestrictedFeatures.length
   );
-const totalSafeZoneCount = filters.showClubEnabledAreas ? safeZoneVariant?.zones.length ?? 0 : 0;
-const hiddenSafeZoneCount = 0;
+  const totalClubZoneCount = showEnabledZones
+    ? enabledZones.length
+    : showRestrictedZones
+      ? restrictedZonePolygons.length
+      : 0;
+  const hiddenSafeZoneCount = 0;
+
+  const clubZoneLabel = showRestrictedZones
+    ? "club-restricted areas"
+    : showEnabledZones
+      ? "club-enabled zones"
+      : "club zones";
+  const clubZonesLoading = showClubZones ? safeZoneLoading : false;
 
   useEffect(() => {
     if (!selectedFeature) return;
@@ -430,6 +466,12 @@ const hiddenSafeZoneCount = 0;
       setHighlightedZone(undefined);
     }
   }, [highlightedZone, safeZones]);
+
+  useEffect(() => {
+    if (!showEnabledZones) {
+      setHighlightedZone(undefined);
+    }
+  }, [showEnabledZones]);
 
   if (!googleMapsApiKey) {
     return (
@@ -474,12 +516,12 @@ const hiddenSafeZoneCount = 0;
           <CannabisMarker key={feature.id} feature={feature} onSelect={setSelectedFeature} />
         ))}
 
-        {filters.showClubEnabledAreas &&
+        {showClubZones &&
           visibleRestrictedFeatures.map((feature) => (
             <RestrictedMarker key={feature.id} feature={feature} onSelect={setSelectedFeature} />
           ))}
 
-        {filters.showClubEnabledAreas &&
+        {showEnabledZones &&
           safeZones.map((zone) => (
             <SafeZonePolygon
               key={zone.id}
@@ -487,6 +529,11 @@ const hiddenSafeZoneCount = 0;
               isHighlighted={highlightedZone?.id === zone.id}
               onHover={setHighlightedZone}
             />
+          ))}
+
+        {showRestrictedZones &&
+          restrictedZonePolygons.map((paths, index) => (
+            <RestrictedZonePolygon key={`restricted-${index}`} paths={paths} />
           ))}
 
         {selectedFeature && (
@@ -536,32 +583,34 @@ const hiddenSafeZoneCount = 0;
         <StatsCard
           cannabisCount={cannabisFeatures.length}
           restrictedCount={restrictedFeatures.length}
-          clubZones={totalSafeZoneCount}
-          clubZonesLoading={safeZoneLoading}
+          clubZones={totalClubZoneCount}
+          clubZoneLabel={clubZoneLabel}
+          clubZonesLoading={clubZonesLoading}
           categoryCount={categoryCount}
           hiddenCannabisCount={hiddenCannabisCount}
           hiddenRestrictedCount={hiddenRestrictedCount}
           hiddenSafeZoneCount={hiddenSafeZoneCount}
+          showClubZones={showClubZones}
         />
         <Card className="pointer-events-auto max-w-xs bg-content1/80 backdrop-blur">
           <CardBody className="flex flex-wrap gap-2">
             <Badge color="success" variant="flat">
               Cannabis businesses
             </Badge>
-            {filters.showClubEnabledAreas && (
+            {showClubZones && (
               <Badge color="danger" variant="flat">
                 Sensitive locations
               </Badge>
             )}
-            {filters.showClubEnabledAreas && (
-              <Badge color="success" variant="flat">
-                Club-enabled zones
+            {showClubZones && (
+              <Badge color={showRestrictedZones ? "danger" : "success"} variant="flat">
+                {showRestrictedZones ? "Club-restricted zones" : "Club-enabled zones"}
               </Badge>
             )}
           </CardBody>
         </Card>
 
-        {highlightedZone && (
+        {showEnabledZones && highlightedZone && (
           <Card className="pointer-events-auto max-w-xs bg-content1/90 backdrop-blur">
             <CardHeader className="flex flex-col items-start gap-1">
               <p className="text-tiny uppercase text-foreground-500">Club-enabled area</p>
@@ -575,11 +624,11 @@ const hiddenSafeZoneCount = 0;
         )}
       </div>
 
-      {(placesLoading || safeZoneLoading) && (
+      {(placesLoading || clubZonesLoading) && (
         <div className="pointer-events-none absolute inset-0 z-10 flex items-end justify-center p-6">
           <div className="pointer-events-auto rounded-large bg-content1/70 px-4 py-2 text-tiny text-foreground-500 shadow-lg">
             {placesLoading && <span>Refreshing place data… </span>}
-            {safeZoneLoading && <span>Updating club-enabled zones…</span>}
+            {clubZonesLoading && <span>Updating {clubZoneLabel}…</span>}
           </div>
         </div>
       )}
@@ -590,7 +639,7 @@ const hiddenSafeZoneCount = 0;
             <CardBody className="space-y-2 text-small">
               <h3 className="font-semibold">Something went wrong while fetching data</h3>
               {placesError && <p>Places data: {String(placesError)}</p>}
-              {safeZoneError && <p>Safe zone data: {String(safeZoneError)}</p>}
+              {safeZoneError && <p>Club zone data: {String(safeZoneError)}</p>}
             </CardBody>
           </Card>
         </div>
@@ -603,20 +652,24 @@ function StatsCard({
   cannabisCount,
   restrictedCount,
   clubZones,
+  clubZoneLabel,
   clubZonesLoading,
   categoryCount,
   hiddenCannabisCount,
   hiddenRestrictedCount,
-  hiddenSafeZoneCount
+  hiddenSafeZoneCount,
+  showClubZones
 }: {
   cannabisCount: number;
   restrictedCount: number;
   clubZones: number;
+  clubZoneLabel: string;
   clubZonesLoading: boolean;
   categoryCount: Record<string, number>;
   hiddenCannabisCount: number;
   hiddenRestrictedCount: number;
   hiddenSafeZoneCount: number;
+  showClubZones: boolean;
 }) {
   const visibleCannabis = Math.max(0, cannabisCount - hiddenCannabisCount);
   const visibleRestricted = Math.max(0, restrictedCount - hiddenRestrictedCount);
@@ -628,16 +681,23 @@ function StatsCard({
         <div>
           <p className="text-tiny uppercase text-foreground-500">Live Inventory</p>
           <h2 className="text-large font-semibold">{visibleCannabis} cannabis spots</h2>
+          {hiddenCannabisCount > 0 && (
+            <p className="text-tiny text-warning">
+              Showing {visibleCannabis} of {cannabisCount} — zoom or filter to see more.
+            </p>
+          )}
         </div>
         <div className="flex flex-col items-end text-right text-tiny text-foreground-500">
           <span>
             {visibleRestricted} sensitive places
             {hiddenRestrictedCount > 0 ? ` (+${hiddenRestrictedCount} hidden)` : ""}
           </span>
-          <span>
-            {clubZonesLoading ? "…" : visibleClubZones} club zones
-            {hiddenSafeZoneCount > 0 ? ` (+${hiddenSafeZoneCount} hidden)` : ""}
-          </span>
+          {showClubZones && (
+            <span>
+              {clubZonesLoading ? "…" : visibleClubZones} {clubZoneLabel}
+              {hiddenSafeZoneCount > 0 ? ` (+${hiddenSafeZoneCount} hidden)` : ""}
+            </span>
+          )}
         </div>
       </CardHeader>
       <Divider />

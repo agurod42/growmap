@@ -13,9 +13,11 @@ export type CityId = (typeof supportedCityIds)[number];
 
 export const supportedCityIdsEnum = [...supportedCityIds] as [CityId, ...CityId[]];
 
+export type ClubZoneMode = "off" | "enabled" | "restricted";
+
 export type MapFilterState = {
   cityId: CityId;
   cannabisCategories: CannabisCategory[];
   restrictedCategories: RestrictedCategory[];
-  showClubEnabledAreas: boolean;
+  clubZoneMode: ClubZoneMode;
 };
