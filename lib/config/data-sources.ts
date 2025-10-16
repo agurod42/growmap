@@ -38,20 +38,51 @@ export const CANNABIS_QUERIES: Record<CannabisCategory, PlaceQueryConfig> = {
   }
 };
 
-export const RESTRICTED_QUERIES: Record<RestrictedCategory, PlaceQueryConfig> = {
-  school: {
-    textQuery: "schools",
-    type: "school"
-  },
-  cultural_center: {
-    textQuery: "cultural center",
-    type: "tourist_attraction",
-    keyword: "cultural center,community center,library"
-  },
-  rehab_center: {
-    textQuery: "drug rehabilitation center",
-    keyword: "rehabilitation center,drug treatment,detox center"
-  }
+export const RESTRICTED_QUERIES: Record<RestrictedCategory, PlaceQueryConfig[]> = {
+  school: [
+    {
+      textQuery: "schools in Montevideo",
+      type: "school"
+    },
+    {
+      textQuery: "universities in Montevideo",
+      type: "university"
+    },
+    {
+      textQuery: "language schools Montevideo"
+    },
+    {
+      textQuery: "institutos educativos Montevideo"
+    }
+  ],
+  cultural_center: [
+    {
+      textQuery: "cultural center Montevideo",
+      type: "tourist_attraction"
+    },
+    {
+      textQuery: "community center Montevideo"
+    },
+    {
+      textQuery: "library Montevideo",
+      type: "library"
+    },
+    {
+      textQuery: "museum Montevideo",
+      type: "museum"
+    }
+  ],
+  rehab_center: [
+    {
+      textQuery: "drug rehabilitation center Montevideo"
+    },
+    {
+      textQuery: "centro de rehabilitación Montevideo"
+    },
+    {
+      textQuery: "addiction treatment center Montevideo"
+    }
+  ]
 };
 
 export const PLACE_FIELDS = [

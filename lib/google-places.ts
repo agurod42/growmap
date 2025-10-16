@@ -321,28 +321,32 @@ export async function fetchRestrictedPlaces({
 
     if (segments.length === 0) {
       for (const category of categories) {
-        const config = RESTRICTED_QUERIES[category];
-        tasks.push(
-          requestPlaces(config, lookupLocation, radius, undefined).then((places) =>
-            places
-              .map((place) => normalizePlace(place, category, "restricted"))
-              .filter((entry): entry is PlaceFeature => Boolean(entry))
-          )
-        );
-      }
-    } else {
-      for (const category of categories) {
-        const config = RESTRICTED_QUERIES[category];
-        for (const segment of segments) {
-          const segmentCenter = boundsCenter(segment);
-          const segmentRadius = Math.max(radius, boundsMaxDistanceToCenter(segment));
+        const configs = RESTRICTED_QUERIES[category];
+        for (const config of configs) {
           tasks.push(
-            requestPlaces(config, segmentCenter, segmentRadius, segment).then((places) =>
+            requestPlaces(config, lookupLocation, radius, undefined).then((places) =>
               places
                 .map((place) => normalizePlace(place, category, "restricted"))
                 .filter((entry): entry is PlaceFeature => Boolean(entry))
             )
           );
+        }
+      }
+    } else {
+      for (const category of categories) {
+        const configs = RESTRICTED_QUERIES[category];
+        for (const config of configs) {
+          for (const segment of segments) {
+            const segmentCenter = boundsCenter(segment);
+            const segmentRadius = Math.max(radius, boundsMaxDistanceToCenter(segment));
+            tasks.push(
+              requestPlaces(config, segmentCenter, segmentRadius, segment).then((places) =>
+                places
+                  .map((place) => normalizePlace(place, category, "restricted"))
+                  .filter((entry): entry is PlaceFeature => Boolean(entry))
+              )
+            );
+          }
         }
       }
     }
