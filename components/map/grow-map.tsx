@@ -411,11 +411,14 @@ export default function GrowMap({ filters }: GrowMapProps) {
   const safeZoneVariant = useMemo(() => {
     if (!safeZoneData) return null;
     if (!showClubZones) return null;
-    const key = safeZoneCacheKey(filters.restrictedCategories);
+    const defaultKey = safeZoneCacheKey(safeZoneData.restrictedCategories);
     return (
-      safeZoneData.variants.find((entry) => entry.key === key) ?? safeZoneData.variants[0] ?? null
+      safeZoneData.variants.find((entry) => entry.key === defaultKey) ??
+      safeZoneData.variants.find((entry) => entry.key === "none") ??
+      safeZoneData.variants[0] ??
+      null
     );
-  }, [filters.restrictedCategories, showClubZones, safeZoneData]);
+  }, [safeZoneData, showClubZones]);
 
   const enabledZones = showEnabledZones ? safeZoneVariant?.enabledZones ?? [] : [];
   const restrictedZonePolygons = showRestrictedZones
