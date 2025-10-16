@@ -1,7 +1,4 @@
-import { readFileSync } from "fs";
-import path from "path";
-
-import { getCityLandGeometryFile } from "@/lib/config/cities";
+import { cityLandGeometry } from "@/data/land";
 import { degreesToRadians, pointInPolygon, type LatLngLiteral } from "@/lib/geo";
 import type { CityId } from "@/types/map";
 
@@ -19,34 +16,23 @@ function loadCityLand(cityId: CityId): MultiPolygon {
     return cached;
   }
 
-  const geometryFile = getCityLandGeometryFile(cityId);
-  const filePath = path.join(process.cwd(), geometryFile);
-  const raw = readFileSync(filePath, "utf-8");
-  const parsed = JSON.parse(raw) as {
-    type: string;
-    features: Array<{
-      geometry:
-        | {
-            type: "Polygon";
-            coordinates: Coordinate[][];
-          }
-        | {
-            type: "MultiPolygon";
-            coordinates: Coordinate[][][];
-          };
-    }>;
-  };
+  const geometry = cityLandGeometry[cityId];
+  if (!geometry) {
+    throw new Error(`Land geometry not configured for city ${cityId}`);
+  }
 
   const polygons: MultiPolygon = [];
 
-  for (const feature of parsed.features) {
-    const { geometry } = feature;
-    if (!geometry) continue;
+  for (const feature of geometry.features ?? []) {
+    const { geometry: featureGeometry } = feature;
+    if (!featureGeometry) continue;
 
-    if (geometry.type === "Polygon") {
-      polygons.push(normalizePolygon(geometry.coordinates));
-    } else if (geometry.type === "MultiPolygon") {
-      for (const polygon of geometry.coordinates) {
+    if (featureGeometry.type === "Polygon") {
+      const coordinates = featureGeometry.coordinates as unknown as Coordinate[][];
+      polygons.push(normalizePolygon(coordinates));
+    } else if (featureGeometry.type === "MultiPolygon") {
+      const coordinates = featureGeometry.coordinates as unknown as Coordinate[][][];
+      for (const polygon of coordinates) {
         polygons.push(normalizePolygon(polygon));
       }
     }

@@ -6,7 +6,6 @@ type CityDefinition = {
   name: string;
   country: string;
   displayName: string;
-  landGeometryFile: string;
   clubSafeDistanceMeters: number;
   restrictedCategories: RestrictedCategory[];
 };
@@ -17,7 +16,6 @@ const cityDefinitions: Record<CityId, CityDefinition> = {
     name: "Montevideo",
     country: "Uruguay",
     displayName: "Montevideo, Uruguay",
-    landGeometryFile: "data/land/montevideo.geojson",
     clubSafeDistanceMeters: 500,
     restrictedCategories: ["school", "cultural_center", "rehab_center"]
   }
@@ -44,10 +42,6 @@ export function getCityRestrictedCategories(cityId: CityId): RestrictedCategory[
 
 export function getCityClubSafeDistance(cityId: CityId) {
   return getCityDefinition(cityId).clubSafeDistanceMeters;
-}
-
-export function getCityLandGeometryFile(cityId: CityId) {
-  return getCityDefinition(cityId).landGeometryFile;
 }
 
 export function createDefaultFiltersForCity(cityId: CityId): MapFilterState {
