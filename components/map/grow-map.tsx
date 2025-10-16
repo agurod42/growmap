@@ -35,8 +35,6 @@ const MAP_LIBRARIES: ("places" | "geometry" | "drawing" | "visualization")[] = [
   "places",
   "geometry"
 ];
-const MIN_ZOOM_LEVEL = 13;
-const MAX_ZOOM_LEVEL = 18;
 const MARKER_RENDER_LIMIT = 250;
 const SAFE_ZONE_ZOOM_THRESHOLD = 13;
 const VIEWPORT_FETCH_ZOOM_THRESHOLD = 13;
@@ -51,8 +49,6 @@ const mapOptions: google.maps.MapOptions = {
   mapTypeControl: false,
   streetViewControl: false,
   zoomControl: true,
-  minZoom: MIN_ZOOM_LEVEL,
-  maxZoom: MAX_ZOOM_LEVEL,
   styles: [
     {
       featureType: "poi",
@@ -239,11 +235,10 @@ export default function GrowMap({ filters }: GrowMapProps) {
         setMapBounds(initialBounds);
       }
       const zoom = map.getZoom();
-      const targetZoom =
-        typeof zoom === "number"
-          ? Math.max(MIN_ZOOM_LEVEL, Math.min(MAX_ZOOM_LEVEL, zoom))
-          : DEFAULT_ZOOM_LEVEL;
-      map.setZoom(targetZoom);
+      const targetZoom = typeof zoom === "number" ? zoom : DEFAULT_ZOOM_LEVEL;
+      if (typeof zoom !== "number") {
+        map.setZoom(targetZoom);
+      }
       setMapZoom(targetZoom);
     },
     [initialBounds]
@@ -256,11 +251,7 @@ export default function GrowMap({ filters }: GrowMapProps) {
     const mapCenter = map.getCenter();
     const zoom = map.getZoom();
     if (typeof zoom === "number") {
-      const clampedZoom = Math.max(MIN_ZOOM_LEVEL, Math.min(MAX_ZOOM_LEVEL, zoom));
-      if (clampedZoom !== zoom) {
-        map.setZoom(clampedZoom);
-      }
-      setMapZoom(clampedZoom);
+      setMapZoom(zoom);
     }
     if (mapCenter) {
       setCenter({ lat: mapCenter.lat(), lng: mapCenter.lng() });
@@ -408,14 +399,10 @@ export default function GrowMap({ filters }: GrowMapProps) {
     );
   }, [filters.restrictedCategories, filters.showClubEnabledAreas, safeZoneData]);
 
-  const safeZones = useMemo(() => {
-    if (!filters.showClubEnabledAreas) return [];
-    if (mapZoom < SAFE_ZONE_ZOOM_THRESHOLD) return [];
-    const zones = safeZoneVariant?.zones ?? [];
-    return mapBounds
-      ? zones.filter((zone) => isWithinViewBounds(zone.center, mapBounds))
-      : zones;
-  }, [filters.showClubEnabledAreas, mapBounds, mapZoom, safeZoneVariant?.zones]);
+const safeZones = useMemo(() => {
+  if (!filters.showClubEnabledAreas) return [];
+  return safeZoneVariant?.zones ?? [];
+}, [filters.showClubEnabledAreas, safeZoneVariant?.zones]);
 
   const categoryCount = useMemo(() => aggregateByCategory(cannabisFeatures), [cannabisFeatures]);
 
@@ -427,8 +414,8 @@ export default function GrowMap({ filters }: GrowMapProps) {
     0,
     restrictedFeatures.length - visibleRestrictedFeatures.length
   );
-  const totalSafeZoneCount = filters.showClubEnabledAreas ? safeZoneVariant?.zones.length ?? 0 : 0;
-  const hiddenSafeZoneCount = Math.max(0, totalSafeZoneCount - safeZones.length);
+const totalSafeZoneCount = filters.showClubEnabledAreas ? safeZoneVariant?.zones.length ?? 0 : 0;
+const hiddenSafeZoneCount = 0;
 
   useEffect(() => {
     if (!selectedFeature) return;
