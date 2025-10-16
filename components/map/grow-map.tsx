@@ -327,12 +327,7 @@ export default function GrowMap({ filters }: GrowMapProps) {
     );
   }, [filteredCannabisByCategory, mapBounds]);
 
-  const shouldRenderCannabisMarkers = mapZoom >= VIEWPORT_FETCH_ZOOM_THRESHOLD;
-
   const visibleCannabisFeatures = useMemo(() => {
-    if (!shouldRenderCannabisMarkers) {
-      return [];
-    }
     if (cannabisFeatures.length <= MARKER_RENDER_LIMIT) {
       return cannabisFeatures;
     }
@@ -349,7 +344,7 @@ export default function GrowMap({ filters }: GrowMapProps) {
       subset.push(cannabisFeatures[selectedIndex]);
     }
     return subset;
-  }, [cannabisFeatures, selectedFeature, shouldRenderCannabisMarkers]);
+  }, [cannabisFeatures, selectedFeature]);
 
   const filteredRestrictedByCategory = useMemo(() => {
     if (!placesData?.restricted) return [];
@@ -547,7 +542,6 @@ const hiddenSafeZoneCount = 0;
           hiddenCannabisCount={hiddenCannabisCount}
           hiddenRestrictedCount={hiddenRestrictedCount}
           hiddenSafeZoneCount={hiddenSafeZoneCount}
-          shouldRenderCannabisMarkers={shouldRenderCannabisMarkers}
         />
         <Card className="pointer-events-auto max-w-xs bg-content1/80 backdrop-blur">
           <CardBody className="flex flex-wrap gap-2">
@@ -613,8 +607,7 @@ function StatsCard({
   categoryCount,
   hiddenCannabisCount,
   hiddenRestrictedCount,
-  hiddenSafeZoneCount,
-  shouldRenderCannabisMarkers
+  hiddenSafeZoneCount
 }: {
   cannabisCount: number;
   restrictedCount: number;
@@ -624,7 +617,6 @@ function StatsCard({
   hiddenCannabisCount: number;
   hiddenRestrictedCount: number;
   hiddenSafeZoneCount: number;
-  shouldRenderCannabisMarkers: boolean;
 }) {
   const visibleCannabis = Math.max(0, cannabisCount - hiddenCannabisCount);
   const visibleRestricted = Math.max(0, restrictedCount - hiddenRestrictedCount);
@@ -636,13 +628,6 @@ function StatsCard({
         <div>
           <p className="text-tiny uppercase text-foreground-500">Live Inventory</p>
           <h2 className="text-large font-semibold">{visibleCannabis} cannabis spots</h2>
-          {cannabisCount > 0 && (!shouldRenderCannabisMarkers || hiddenCannabisCount > 0) && (
-            <p className="text-tiny text-warning">
-              {shouldRenderCannabisMarkers
-                ? `Showing ${visibleCannabis} of ${cannabisCount} — zoom or filter to see more.`
-                : `Zoom in (>${VIEWPORT_FETCH_ZOOM_THRESHOLD}) to reveal map markers.`}
-            </p>
-          )}
         </div>
         <div className="flex flex-col items-end text-right text-tiny text-foreground-500">
           <span>
