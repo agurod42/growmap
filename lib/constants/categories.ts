@@ -12,7 +12,8 @@ export const cannabisCategoryOptions: Record<CannabisCategory, string> = {
 export const restrictedCategoryOptions: Record<RestrictedCategory, string> = {
   school: "Schools",
   cultural_center: "Cultural Centers",
-  rehab_center: "Rehabilitation Centers"
+  rehab_center: "Rehabilitation Centers",
+  kindergarten: "Kindergartens"
 };
 
 export const cannabisCategoryList = Object.keys(cannabisCategoryOptions) as CannabisCategory[];

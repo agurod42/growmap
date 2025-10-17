@@ -82,6 +82,21 @@ export const RESTRICTED_QUERIES: Record<RestrictedCategory, PlaceQueryConfig[]> 
     {
       textQuery: "addiction treatment center Montevideo"
     }
+  ],
+  kindergarten: [
+    {
+      textQuery: "kindergarten Montevideo",
+      keyword: "jardín de infantes,escuela infantil,preescolar"
+    },
+    {
+      textQuery: "jardín de infantes Montevideo"
+    },
+    {
+      textQuery: "escuela infantil Montevideo"
+    },
+    {
+      textQuery: "preescolar Montevideo"
+    }
   ]
 };
 
