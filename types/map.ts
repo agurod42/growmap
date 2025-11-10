@@ -6,7 +6,12 @@ export type CannabisCategory =
   | "event"
   | "other";
 
-export type RestrictedCategory = "cultural_center" | "kindergarten" | "rehab_center" | "school";
+export type RestrictedCategory =
+  | "charter_school"
+  | "cultural_center"
+  | "kindergarten"
+  | "rehab_center"
+  | "school";
 
 export const supportedCityIds = ["montevideo"] as const;
 export type CityId = (typeof supportedCityIds)[number];

@@ -39,6 +39,17 @@ export const CANNABIS_QUERIES: Record<CannabisCategory, PlaceQueryConfig> = {
 };
 
 export const RESTRICTED_QUERIES: Record<RestrictedCategory, PlaceQueryConfig[]> = {
+  charter_school: [
+    {
+      textQuery: "charter school Montevideo",
+      type: "school"
+    },
+    {
+      textQuery: "charter schools Montevideo",
+      keyword: "charter school",
+      type: "school"
+    }
+  ],
   school: [
     {
       textQuery: "schools in Montevideo",

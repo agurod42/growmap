@@ -10,6 +10,7 @@ export const cannabisCategoryOptions: Record<CannabisCategory, string> = {
 };
 
 export const restrictedCategoryOptions: Record<RestrictedCategory, string> = {
+  charter_school: "Charter Schools",
   cultural_center: "Cultural Centers",
   kindergarten: "Kindergartens",
   rehab_center: "Rehabilitation Centers",

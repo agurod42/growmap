@@ -17,7 +17,13 @@ const cityDefinitions: Record<CityId, CityDefinition> = {
     country: "Uruguay",
     displayName: "Montevideo, Uruguay",
     clubSafeDistanceMeters: 200,
-    restrictedCategories: ["cultural_center", "kindergarten", "rehab_center", "school"]
+    restrictedCategories: [
+      "charter_school",
+      "cultural_center",
+      "kindergarten",
+      "rehab_center",
+      "school"
+    ]
   }
 };
 
