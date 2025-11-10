@@ -98,7 +98,7 @@ export default function HomePage() {
         {filterSidebar}
       </aside>
       <Divider className="md:hidden" />
-      <main className="flex-1 min-h-[calc(100vh-64px)] md:min-h-screen">
+      <main className="flex w-full flex-1 flex-col h-[calc(100vh-4rem)] min-h-[calc(100vh-4rem)] supports-[height:100dvh]:h-[calc(100dvh-4rem)] supports-[height:100dvh]:min-h-[calc(100dvh-4rem)] supports-[height:100svh]:h-[calc(100svh-4rem)] supports-[height:100svh]:min-h-[calc(100svh-4rem)] md:h-auto md:min-h-screen">
         <Suspense fallback={<LoadingOverlay />}>
           <GrowMap filters={filters} />
         </Suspense>

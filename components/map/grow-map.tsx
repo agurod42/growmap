@@ -41,7 +41,7 @@ const VIEWPORT_FETCH_ZOOM_THRESHOLD = 13;
 const DEFAULT_CENTER = parseDefaultCenter();
 const INITIAL_RADIUS_METERS = 1500;
 const DEFAULT_ZOOM_LEVEL = 14;
-const MAP_CONTAINER_STYLE = { width: "100%", height: "100%" };
+const MAP_CONTAINER_STYLE = { width: "100%", height: "100%", minHeight: "360px" };
 
 const mapOptions: google.maps.MapOptions = {
   disableDefaultUI: false,
@@ -506,81 +506,83 @@ export default function GrowMap({ filters }: GrowMapProps) {
   }
 
   return (
-    <div className="relative h-full w-full">
-      <GoogleMap
-        onLoad={onMapLoad}
-        onIdle={onMapIdle}
-        center={center}
-        zoom={mapZoom}
-        mapContainerStyle={MAP_CONTAINER_STYLE}
-        options={mapOptions}
-      >
-        {visibleCannabisFeatures.map((feature) => (
-          <CannabisMarker key={feature.id} feature={feature} onSelect={setSelectedFeature} />
-        ))}
-
-        {showClubZones &&
-          visibleRestrictedFeatures.map((feature) => (
-            <RestrictedMarker key={feature.id} feature={feature} onSelect={setSelectedFeature} />
+    <div className="relative flex flex-1 h-full min-h-[360px] w-full md:min-h-0">
+      <div className="absolute inset-0">
+        <GoogleMap
+          onLoad={onMapLoad}
+          onIdle={onMapIdle}
+          center={center}
+          zoom={mapZoom}
+          mapContainerStyle={MAP_CONTAINER_STYLE}
+          options={mapOptions}
+        >
+          {visibleCannabisFeatures.map((feature) => (
+            <CannabisMarker key={feature.id} feature={feature} onSelect={setSelectedFeature} />
           ))}
 
-        {showEnabledZones &&
-          safeZones.map((zone) => (
-            <SafeZonePolygon
-              key={zone.id}
-              zone={zone}
-              isHighlighted={highlightedZone?.id === zone.id}
-              onHover={setHighlightedZone}
-            />
-          ))}
+          {showClubZones &&
+            visibleRestrictedFeatures.map((feature) => (
+              <RestrictedMarker key={feature.id} feature={feature} onSelect={setSelectedFeature} />
+            ))}
 
-        {showRestrictedZones &&
-          restrictedZonePolygons.map((paths, index) => (
-            <RestrictedZonePolygon key={`restricted-${index}`} paths={paths} />
-          ))}
+          {showEnabledZones &&
+            safeZones.map((zone) => (
+              <SafeZonePolygon
+                key={zone.id}
+                zone={zone}
+                isHighlighted={highlightedZone?.id === zone.id}
+                onHover={setHighlightedZone}
+              />
+            ))}
 
-        {selectedFeature && (
-          <InfoWindowF
-            position={selectedFeature.location}
-            onCloseClick={() => setSelectedFeature(null)}
-          >
-            <div className="max-w-xs space-y-2">
-              <div>
-                <h3 className="font-semibold text-foreground">{selectedFeature.name}</h3>
-                {selectedFeature.address && (
-                  <p className="text-tiny text-foreground-500">{selectedFeature.address}</p>
-                )}
-              </div>
-              {selectedFeature.rating && (
-                <div className="text-tiny text-foreground-500">
-                  Rating {selectedFeature.rating.toFixed(1)} ▪︎ {selectedFeature.userRatingCount ?? 0} reviews
+          {showRestrictedZones &&
+            restrictedZonePolygons.map((paths, index) => (
+              <RestrictedZonePolygon key={`restricted-${index}`} paths={paths} />
+            ))}
+
+          {selectedFeature && (
+            <InfoWindowF
+              position={selectedFeature.location}
+              onCloseClick={() => setSelectedFeature(null)}
+            >
+              <div className="max-w-xs space-y-2">
+                <div>
+                  <h3 className="font-semibold text-foreground">{selectedFeature.name}</h3>
+                  {selectedFeature.address && (
+                    <p className="text-tiny text-foreground-500">{selectedFeature.address}</p>
+                  )}
                 </div>
-              )}
-              <div className="flex flex-wrap gap-2 text-tiny text-foreground-500">
-                {selectedFeature.websiteUri && (
-                  <a
-                    href={selectedFeature.websiteUri}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-success"
-                  >
-                    Website
-                  </a>
+                {selectedFeature.rating && (
+                  <div className="text-tiny text-foreground-500">
+                    Rating {selectedFeature.rating.toFixed(1)} ▪︎ {selectedFeature.userRatingCount ?? 0} reviews
+                  </div>
                 )}
-                {selectedFeature.phoneNumber && <span>{selectedFeature.phoneNumber}</span>}
+                <div className="flex flex-wrap gap-2 text-tiny text-foreground-500">
+                  {selectedFeature.websiteUri && (
+                    <a
+                      href={selectedFeature.websiteUri}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-success"
+                    >
+                      Website
+                    </a>
+                  )}
+                  {selectedFeature.phoneNumber && <span>{selectedFeature.phoneNumber}</span>}
+                </div>
+                <Badge
+                  color={selectedFeature.type === "cannabis" ? "success" : "danger"}
+                  variant="flat"
+                >
+                  {selectedFeature.type === "cannabis"
+                    ? cannabisCategoryOptions[selectedFeature.cannabisCategory ?? "other"] ?? "Cannabis"
+                    : selectedFeature.restrictedCategory ?? "Restricted"}
+                </Badge>
               </div>
-              <Badge
-                color={selectedFeature.type === "cannabis" ? "success" : "danger"}
-                variant="flat"
-              >
-                {selectedFeature.type === "cannabis"
-                  ? cannabisCategoryOptions[selectedFeature.cannabisCategory ?? "other"] ?? "Cannabis"
-                  : selectedFeature.restrictedCategory ?? "Restricted"}
-              </Badge>
-            </div>
-          </InfoWindowF>
-        )}
-      </GoogleMap>
+            </InfoWindowF>
+          )}
+        </GoogleMap>
+      </div>
 
       <div className="pointer-events-none absolute left-4 top-4 z-20 flex flex-col gap-3">
         <StatsCard
