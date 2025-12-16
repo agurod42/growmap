@@ -14,7 +14,7 @@
     "@react-google-maps/api": "^2.19.1",
     "concaveman": "^2.0.0",
     "h3-js": "^4.1.0",
-    "next": "14.2.3",
+    "next": "14.2.35",
     "node-cron": "^4.2.1",
     "polygon-clipping": "^0.15.7",
     "react": "18.3.1",
